@@ -1,0 +1,102 @@
+@import url('https://fonts.cdnfonts.com/css/unbounded');
+@import url('https://fonts.cdnfonts.com/css/martian-mono');
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Unbounded', sans-serif !important;
+}
+/* Navabar Styles */
+.lg-navbar li a {
+    font-family: 'Martian Mono', sans-serif;                                
+    color: #ffff;     
+    font-size: 0.8rem; 
+    letter-spacing: 1px;                                        
+}
+/* Slider Styles */
+.lg-slider {
+    top: -120px;
+}
+
+.lg-slider img {
+    filter: brightness(0.5);
+}
+.lg-slider h1 {
+    font-size: 3.75rem;
+    font-weight: bold;
+    color: #ffffff;
+    letter-spacing: 3px;
+}
+
+.lg-desc {
+    color: #666666;
+    font-size: 1.8rem;
+}
+.uk-custom-images {
+    position: relative;
+}
+.imagen-desc-1 {
+    width: 70%;
+    position: relative;
+    z-index: 1;
+    margin-bottom: -30px;
+}
+.imagen-desc-2 {
+    width: 50%;
+    position: absolute;
+    top: 130px;
+    right: 20px;
+    z-index: 2;
+    background: white; /* Fondo blanco para crear el "borde" */
+    padding: 5px 0px 0px 5px; /* Tamaño del borde blanco */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Sombra para la imagen */
+}
+.lg-list {
+    color: #826363;
+    font-weight: bold;
+}
+   /* Ajuste de la imagen */
+.uk-cover-container img {
+    object-fit: cover;
+    width: 100%;
+    height: 50vh; /* Define una altura basada en el viewport */
+}
+
+/* Asegurar que ambos contenedores tengan la misma altura */
+.lg-container {
+    display: flex;
+    align-items: stretch;
+}
+
+.lg-action {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    height: 50vh; /* Coincide con la altura de la imagen */
+}
+
+/* Ajuste en pantallas pequeñas */
+@media (max-width: 960px) {
+    .uk-card-media-left, .uk-cover-container img, .lg-action {
+        height: auto;
+        width: 100%;
+    }
+    .lg-slider {
+        top: 0px;
+    }
+    .lg-slider h1 {
+        font-size: 1.375rem;
+        margin-top: 20px;
+    }
+    .lg-slider p {
+        font-size: 0.7rem;
+    }
+    .lg-slider a {
+        font-size: 0.6rem;
+        padding: 0px 5px 0px 5px;
+        line-height: 20px;
+        margin-top: -20px;
+    }
+    .lg-desc {
+        margin-top: 120px;
+        font-size: 1rem;
+    }
+}
