@@ -73,6 +73,394 @@ h1, h2, h3, h4, h5, h6 {
     height: 50vh; /* Coincide con la altura de la imagen */
 }
 
+.service-section {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.service-section h2 {
+    color: #c8b48f;
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.service-section h3 {
+    color: #666666;
+    font-size: 1.625rem;
+    font-weight: bold;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+.service-card img {
+    border-radius: 15px;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+.service-card h4 {
+    font-weight: bold;
+    color: #333;
+    font-size: 1.3rem;
+    margin-top: 15px;
+}
+.banner-container {
+    background-image: url('https://images.unsplash.com/photo-1682888813726-24adc990e6f7?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    color: white;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 50vh; /* Adjust height as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.uk-background-muted {
+    background-color: rgba(87, 70, 57, 0.7); /* Adjust transparency to desired effect */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.banner-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr; /* 4 equal columns */
+    gap: 20px; /* Space between elements */
+    width: 100%;
+    max-width: 1200px; /* Limit content width */
+    align-items: center;
+    text-align: center;
+}
+
+.banner-content-left h2 {
+    font-size: 3rem;
+    margin: 0;
+    color: #FFF;
+}
+
+.bn2-desc {
+    font-size: 0.8rem;
+    font-weight: 100;
+    line-height: 1.5;
+    color: #FFF;
+    grid-column: span 2; /* Span 2 columns on larger screens */
+}
+
+.banner-content-right p {
+    margin: 0;
+    font-size: 1.25rem;
+    text-align: right;
+}
+
+.banner-content-right .uk-heading-small {
+    font-size: 1.5rem;
+    color: #FFF;
+}
+
+/* Proyects Styles */
+.projects-section {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+}
+
+/* Header Styles */
+.projects-header {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    max-width: fit-content;
+    padding: 30px;
+}
+
+.projects-header .projects-subtitle {
+    color: #B8A680;
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.projects-header .projects-title {
+    font-size: 3.375rem;
+    font-weight: bold;
+    margin-top: 0.5rem;
+    color: #666666;
+}
+
+/* Carousel Styles */
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 30px 0;
+}
+
+.carousel-button {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #866e59;
+    cursor: pointer;
+}
+
+.carousel-images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.carousel-images .main-image {
+    width: 100%;
+    max-width: 900px;
+    border-radius: 10px;
+}
+
+.thumbnail-images {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.thumbnail-images img {
+    width: 250px;
+    height: auto;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+/* Description Section Styles */
+.description-section {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    text-align: left;
+    margin-top: 20px;
+    /* padding: 80px; */
+}
+
+.description-item {
+    max-width: 45%;
+}
+
+.description-item h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.description-item p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+.prev-button, .next-button {
+    font-size: 1rem;
+}
+
+/* Reviews Section Styles */
+.reviews-section {
+    padding: 0px 20px;
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+}
+
+/* Header Styles */
+.reviews-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: fit-content;
+    padding: 30px;
+}
+
+.reviews-header .reviews-subtitle {
+    color: #B8A680;
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.reviews-header .reviews-title {
+    font-size:  2.765rem;
+    font-weight: bold;
+    margin-top: 0.5rem;
+    color: #666666;
+}
+
+/* Reviews Carousel Styles */
+.reviews-carousel {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.review-item {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.review-item span {
+    color: #B8A680;
+}
+
+.review-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.review-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+    font-style: italic;
+}
+
+/* Clients Section Styles */
+.clients-section {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.clients-title {
+    font-size: 2.765rem;
+    font-weight: bold;
+    color: #666666;
+    margin-bottom: 20px;
+}
+
+/* Clients Logos Container */
+.clients-logos {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.client-logo img {
+    width: 100px;
+    height: auto;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+}
+
+.client-logo img:hover {
+    opacity: 1;
+}
+
+/* Faq Styles */
+.uk-container h2 {
+    color: #D6B67E;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.uk-accordion-title {
+    color: #0A0A0A;
+    font-weight: 600;
+}
+
+.uk-accordion-content p {
+    color: #606060;
+    font-size: 1rem;
+    margin: 0;
+}
+/* Contact Form Styles */
+.contact-heading {
+    font-size: 2.765rem !important;
+    color: #666666 !important;
+    font-weight: bold;
+}
+
+.custom-input,
+.custom-textarea {
+    border: 2px solid #B8B8B8;
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 1rem;
+    color: #333;
+}
+
+.custom-input:focus,
+.custom-textarea:focus {
+    border-color: #333;
+}
+
+.custom-button {
+    background-color: #333;
+    color: #FFF;
+    border-radius: 10px;
+    width: 100%;
+    font-weight: bold;
+    font-size: 12px;
+    text-transform: capitalize;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.custom-button:hover {
+    background-color: #444;
+}
+
+  /* Custom footer styling */
+  .uk-section-secondary {
+    background-color: #333;
+}
+
+.uk-heading-small {
+    color: #FFF;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.uk-button-default {
+    background-color: #FFF;
+    color: #333;
+    font-weight: bold;
+    padding: 8px 20px;
+}
+
+.uk-subnav-divider > li > a {
+    color: #FFFFFF !important;
+    font-weight: bold;
+}
+
+.lg-tel, .lg-mail {
+    color: #FFFFFF;
+}
+
+.lg-copy {
+    color: #FFFFFF !important;
+    font-size: 0.765rem;
+}
+
+.lg-btn-pre {
+    background-color: #FFFFFF !important;
+    color: #707070 !important;
+    font-weight: bold;
+}
+
+.social-icon {
+    color: #d6b67e !important;
+    transition: color 0.3s ease;
+}
+.social-icon:hover {
+    color: #ffffff !important; 
+}
+
+
 /* Ajuste en pantallas pequeñas */
 @media (max-width: 960px) {
     .uk-card-media-left, .uk-cover-container img, .lg-action {
@@ -91,12 +479,66 @@ h1, h2, h3, h4, h5, h6 {
     }
     .lg-slider a {
         font-size: 0.6rem;
-        padding: 0px 5px 0px 5px;
         line-height: 20px;
-        margin-top: -20px;
+        margin-top: -10px;
     }
     .lg-desc {
         margin-top: 120px;
         font-size: 1rem;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .banner-content {
+        grid-template-columns: 1fr; /* Stack all items in a single column on smaller screens */
+        text-align: center;
+    }
+    
+    .bn2-desc {
+        grid-column: span 1; /* Revert to single column span */
+    }
+    .projects-header .projects-title {
+        font-size: 2rem;
+    }
+
+    .carousel {
+        flex-direction: column;
+    }
+
+    .thumbnail-images img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .description-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .description-item {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .reviews-carousel {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .review-item {
+        width: 90%;
+    }
+
+    .clients-logos {
+        gap: 20px;
+    }
+
+    .client-logo img {
+        width: 80px;
+    }
+
+    .modal-img {
+        height: 50vh !important;
     }
 }

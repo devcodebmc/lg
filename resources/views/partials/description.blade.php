@@ -1,4 +1,4 @@
-<div class="uk-section uk-section-default uk-padding lg-description">
+<div class="uk-section uk-section-default uk-padding lg-description" id="sobre-nosotros">
     <div class="uk-container uk-flex" uk-grid>
         <!-- Imágenes -->
         <div class="uk-width-1-2@m uk-position-relative uk-custom-images">

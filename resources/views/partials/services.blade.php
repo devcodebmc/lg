@@ -1,40 +1,4 @@
-<!-- CSS adicional -->
-<style>
-    .service-section {
-        text-align: center;
-        padding: 40px 0;
-    }
-
-    .service-section h2 {
-        color: #c8b48f;
-        font-size: 1.25rem;
-        font-weight: bold;
-        margin: 0;
-    }
-
-    .service-section h3 {
-        color: #666666;
-        font-size: 1.625rem;
-        font-weight: bold;
-        margin-top: 5px;
-        margin-bottom: 20px;
-    }
-
-    .service-card img {
-        border-radius: 15px;
-        width: 100%;
-        height: 300px;
-    }
-
-    .service-card h4 {
-        font-weight: bold;
-        color: #333;
-        font-size: 1.3rem;
-        margin-top: 15px;
-    }
-</style>
-
-<div class="uk-section uk-section-default service-section">
+<div class="uk-section uk-section-default service-section" id="servicios">
     <!-- Títulos de la sección -->
     <h2>NUESTROS SERVICIOS</h2>
     <h3>SERVICIOS QUE OFRECEMOS</h3>
