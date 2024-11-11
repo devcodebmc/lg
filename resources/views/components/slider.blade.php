@@ -1,4 +1,4 @@
-<div class="uk-position-relative uk-visible-toggle uk-light lg-slider" tabindex="-1" uk-slideshow>
+<div class="uk-position-relative uk-visible-toggle uk-light lg-slider" tabindex="-1" uk-slideshow="autoplay: true; autoplay-interval: 4000; animation: fade; ">
 
     <div class="uk-slideshow-items">
         <div>

@@ -23,8 +23,8 @@
                 <li><span uk-icon="crosshairs"></span> Trabajo Vanguardista.</li>
             </ul>
 
-            <button class="uk-button uk-button-default" 
-                    style="background: #816262; color: #ffff; border-radius: 8px;">Obtener Presupuesto</button>
+            <a href="#presupuesto" uk-toggle  class="uk-button uk-button-default" 
+                    style="background: #816262; color: #ffff; border-radius: 8px;">Obtener Presupuesto</a>
         </div>
     </div>
 </div>
