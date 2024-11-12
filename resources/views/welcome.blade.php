@@ -12,7 +12,6 @@
 @include('partials.clients')
 @include('partials.faq')
 @include('components.contactForm')
-@include('components.footer')
 @include('components.modalBudget')
 
 @endsection

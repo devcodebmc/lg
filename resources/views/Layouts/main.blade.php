@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Construcción y Remodelación LG</title>
+    <title>Construcción y Remodelación LG @yield('title')</title>
      {{-- Uikit Styles --}}
     <link rel="stylesheet" href="{{ asset('css/uikit.css') }}">
     <link rel="stylesheet" href="{{ asset('css/index.css') }}">
@@ -16,6 +16,8 @@
     <section>
         @yield('content')
     </section> 
+
+    @include('components.footer')
     
     <script src="{{ asset('js/uikit.min.js') }}"></script>
     <script src="{{ asset('js/uikit-icons.min.js') }}"></script>

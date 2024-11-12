@@ -18,4 +18,8 @@ Route::get('/', function () {
     return view('welcome');
 })->name('welcome');
 
+Route::get('/proyectos', function () {
+    return view('pages.proyects');
+})->name('proyects');
+
 Route::post('/contact/send', [ContactController::class, 'send'])->name('contact.send');
