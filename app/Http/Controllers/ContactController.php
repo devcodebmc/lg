@@ -19,7 +19,7 @@ class ContactController extends Controller
         ]);
 
         // Envía el correo
-        Mail::to('destinatario@ejemplo.com')->send(new ContactFormMail($data));
+        Mail::to('manzanocortesbrayan@gmail.com')->send(new ContactFormMail($data));
 
         // Redirige con un mensaje de éxito
         return redirect()->back()->with('success', '¡Tu mensaje ha sido enviado con éxito!');
