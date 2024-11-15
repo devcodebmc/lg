@@ -1,4 +1,4 @@
-<div class="uk-section uk-section-secondary uk-light uk-margin-large-top">
+<footer class="uk-section uk-section-secondary uk-light uk-margin-large-top">
     <div class="uk-container uk-container-expand">
         <div class="uk-grid-divider uk-child-width-1-3@s uk-text-center" uk-grid>
             <div>
@@ -37,20 +37,20 @@
         <div class="uk-text-center uk-margin-top uk-margin-small-bottom">
             <p class="lg-copy">© Construcción y Remodelación LG. 2024</p>
              <!-- Redes Sociales -->
-            <div class="uk-text-center uk-margin-top">
+            <div class="uk-text-center uk-margin-top uk-margin-medium-bottom">
                 <ul class="uk-subnav uk-flex-center uk-margin-remove">
                     <li><a href="#" target="_blank" uk-icon="icon: facebook" class="social-icon"></a></li>
                     <li><a href="#" target="_blank" uk-icon="icon: instagram" class="social-icon"></a></li>
                     <li><a href="#" target="_blank" uk-icon="icon: whatsapp" class="social-icon"></a></li>
                 </ul>
             </div>
-            <h6 class="uk-margin-medium-top" style="font-size: 12px; font-weight:100 !important;">
+            <small class="uk-h6">
                 © 2024. Hecho con 💚
                 <a class="uk-link-reset" href="https://www.bydsolutions.com" target="_blank" rel="noopener noreferrer" style="color: #7381df !important">
                     ByD Solutions
                 </a> 
                 💻 Todos los derechos reservados 
-            </h6>
+            </small>
         </div>
     </div>
-</div>
+</footer>

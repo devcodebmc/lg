@@ -274,76 +274,31 @@ h1, h2, h3, h4, h5, h6 {
     color: #666666;
 }
 
-/* Carousel Styles */
-.carousel {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    margin: 30px 0;
+ /* Trabajos Styles*/
+ .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas */
+    grid-template-rows: auto;
+    gap: 10px; /* Espacio entre las imágenes */
 }
 
-.carousel-button {
-    background: none;
-    border: none;
-    font-size: 2rem;
-    color: #866e59;
-    cursor: pointer;
+/* La imagen principal ocupa el doble de espacio en la cuadrícula */
+.project-main {
+    grid-column: span 2;
+    grid-row: span 2;
+    /* height: 400px; */
 }
 
-.carousel-images {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.carousel-images .main-image {
+.project img {
     width: 100%;
-    max-width: 900px;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 3s ease;
     border-radius: 10px;
 }
 
-.thumbnail-images {
-    display: flex;
-    gap: 10px;
-    margin-top: 15px;
-}
-
-.thumbnail-images img {
-    width: 200px;
-    height: auto;
-    border-radius: 5px;
-    object-fit: cover;
-}
-
-/* Description Section Styles */
-.description-section {
-    display: flex;
-    justify-content: space-around;
-    gap: 20px;
-    text-align: left;
-    margin-top: 20px;
-    /* padding: 80px; */
-}
-
-.description-item {
-    max-width: 45%;
-}
-
-.description-item h3 {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #333;
-}
-
-.description-item p {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #555;
-}
-
-.prev-button, .next-button {
-    font-size: 1rem;
+.project:hover img {
+    transform: scale(1.05); /* Efecto de zoom */
 }
 
 /* Reviews Section Styles */
@@ -548,6 +503,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
+
+
 /* Ajuste en pantallas pequeñas */
 @media (max-width: 960px) {
     .uk-card-media-left, .uk-cover-container img, .lg-action {
@@ -589,23 +546,12 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 2rem;
     }
 
-    .carousel {
-        flex-direction: column;
+    .projects-grid {
+        grid-template-columns: 1fr; /* Una sola columna en móviles */
     }
-
-    .thumbnail-images img {
-        width: 80px;
-        height: 80px;
-    }
-
-    .description-section {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .description-item {
-        max-width: 100%;
-        text-align: center;
+    .project-main {
+        grid-column: span 1;
+        grid-row: span 1;
     }
 
     .reviews-carousel {
