@@ -8,12 +8,12 @@
     <div class="carousel">
         <button class="carousel-button" uk-icon="icon: chevron-left; ratio: 5"></button>
         <div class="carousel-images" uk-slideshow="animation: fade">
-            <div class="uk-slideshow-items">
-                
+            <a class=" uk-link-reset" href="{{ route('proyects') }}" style="display: contents;">
+                <div class="uk-slideshow-items">
                     <div>
-                        <a href="{{ route('proyects') }}">
+                        
                         <img src="https://images.unsplash.com/photo-1682888818589-404faaa4dbc9?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"  class="main-image" alt="" uk-cover>
-                         </a>
+                    
                     </div>
                     <div>
                         <img src="https://images.unsplash.com/photo-1682888813788-bf57c360123e?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"  class="main-image" alt="" uk-cover>
@@ -21,8 +21,8 @@
                     <div>
                         <img src="https://images.unsplash.com/photo-1682888818602-b4492fadf2f8?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"  class="main-image" alt="" uk-cover>
                     </div>
-               
-            </div>
+                </div>
+            </a>
             <div class="thumbnail-images">
                 <ul class="uk-thumbnav">
                     <li uk-slideshow-item="0"><a href="#"><img src="https://images.unsplash.com/photo-1682888818589-404faaa4dbc9?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" width="100" height="67" alt=""></a></li>

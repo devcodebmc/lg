@@ -7,11 +7,14 @@
             <div class="uk-flex uk-flex-column uk-flex-middle">
                 <div class="uk-flex uk-flex-middle lg-tel">
                     <span uk-icon="icon: receiver; ratio: 1.2" class="uk-margin-small-right"></span>
-                    <span>+52 558 903 4789</span>
+                    <a href="tel:+525515659700" style="text-decoration: none;">
+                        <span>+52 55 1565 9700</span>
+                    </a>
                 </div>
                 <div class="uk-flex uk-flex-middle uk-margin-small-top lg-mail">
                     <span uk-icon="icon: mail; ratio: 1.2" class="uk-margin-small-right"></span>
-                    <span>contacto@correo</span>
+                    <a href="mailto:"></a>
+                    <span>contacto@construccion</span>
                 </div>
             </div>
             <div class="uk-text-center">
