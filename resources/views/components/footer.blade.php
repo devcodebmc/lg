@@ -14,7 +14,7 @@
                 <div class="uk-flex uk-flex-middle uk-margin-small-top lg-mail">
                     <span uk-icon="icon: mail; ratio: 1.2" class="uk-margin-small-right"></span>
                     <a href="mailto:"></a>
-                    <span>contacto@construccion</span>
+                    <span>ventas@construccionyremodelacionlg</span>
                 </div>
             </div>
             <div class="uk-text-center">
@@ -35,7 +35,7 @@
         <hr>
 
         <div class="uk-text-center uk-margin-top uk-margin-small-bottom">
-            <p class="lg-copy">© Construcción y Mantenimiento LG. 2024</p>
+            <p class="lg-copy">© Construcción y Remodelación LG. 2024</p>
              <!-- Redes Sociales -->
             <div class="uk-text-center uk-margin-top">
                 <ul class="uk-subnav uk-flex-center uk-margin-remove">
@@ -44,7 +44,7 @@
                     <li><a href="#" target="_blank" uk-icon="icon: whatsapp" class="social-icon"></a></li>
                 </ul>
             </div>
-            <h6 class="uk-margin-medium-top" style="font-size: 10px;">
+            <h6 class="uk-margin-medium-top" style="font-size: 12px; font-weight:100 !important;">
                 © 2024. Hecho con 💚
                 <a class="uk-link-reset" href="https://www.bydsolutions.com" target="_blank" rel="noopener noreferrer" style="color: #7381df !important">
                     ByD Solutions

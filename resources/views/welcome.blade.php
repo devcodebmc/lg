@@ -7,7 +7,7 @@
 @include('partials.banner')
 @include('partials.services')
 @include('partials.banner2')
-@include('partials.proyects')
+@include('partials.trabajos')
 @include('partials.testimonials')
 @include('partials.clients')
 @include('partials.faq')
