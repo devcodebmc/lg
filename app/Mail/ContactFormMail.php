@@ -25,6 +25,12 @@ class ContactFormMail extends Mailable
         $this->data = $data;
     }
 
+    public function build()
+    {
+        return  $this->subject('Nuevo mensaje de contacto')
+                        ->view('emails.contact')->with(['data' => $this->data]);
+    }
+
     /**
      * Get the message envelope.
      *
@@ -33,7 +39,7 @@ class ContactFormMail extends Mailable
     public function envelope()
     {
         return new Envelope(
-            subject: 'Contact Form Mail',
+            subject: 'Nuevo Mensaje de Contacto',
         );
     }
 

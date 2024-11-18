@@ -18,10 +18,15 @@ class ContactController extends Controller
             'mensaje' => 'required|string',
         ]);
 
-        // Envía el correo
-        Mail::to('manzanocortesbrayan@gmail.com')->send(new ContactFormMail($data));
+        try {
+            // Enviar el correo
+            Mail::to('manzanocortesbrayan@gmail.com')->send(new ContactFormMail($data));
 
-        // Redirige con un mensaje de éxito
-        return redirect()->back()->with('success', '¡Tu mensaje ha sido enviado con éxito!');
+            // Regresar un mensaje satisfactorio a la vista
+            return redirect()->back()->with('success', '¡Gracias por contactarnos! Tu mensaje ha sido enviado. En breve nos comunicaremos contigo!');
+        } catch (\Exception $e) {
+            // Manejar errores de envío
+            return redirect()->back()->with('error', 'Hubo un problema al enviar tu mensaje. Por favor, intenta nuevamente.');
+        }
     }
 }
