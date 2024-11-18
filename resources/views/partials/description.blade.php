@@ -9,7 +9,7 @@
         <!-- Texto y lista de características -->
         <div class="uk-width-1-2@m">
             <h2 class="uk-heading-small uk-text-bold lg-desc">
-                TRABAJO DE CALIDAD QUE <br> CUMPLEN TUS EXPECTATIVAS
+                Trabajo De Calidad Que <br> Cumplen Tus Expectativas
             </h2>
             <p style="font-size: 1rem;">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sit amet lorem feugiat, varius ligula vel, malesuada ipsum. Vivamus eu dui ac lacus placerat porta id eu magna. Curabitur consequat nibh vitae egestas ultrices. Nunc aliquet nibh magna, non imperdiet metus ultricies sit amet.

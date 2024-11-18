@@ -35,7 +35,7 @@
         <hr>
 
         <div class="uk-text-center uk-margin-top uk-margin-small-bottom">
-            <p class="lg-copy">© Construcción y Remodelación LG. 2024</p>
+            <small class="uk-h6">© Construcción y Remodelación LG. 2024</small>
              <!-- Redes Sociales -->
             <div class="uk-text-center uk-margin-top uk-margin-medium-bottom">
                 <ul class="uk-subnav uk-flex-center uk-margin-remove">
@@ -44,13 +44,13 @@
                     <li><a href="#" target="_blank" uk-icon="icon: whatsapp" class="social-icon"></a></li>
                 </ul>
             </div>
-            <small class="uk-h6">
+            <p class="lg-copy">
                 © 2024. Hecho con 💚
                 <a class="uk-link-reset" href="https://www.bydsolutions.com" target="_blank" rel="noopener noreferrer" style="color: #7381df !important">
                     ByD Solutions
                 </a> 
                 💻 Todos los derechos reservados 
-            </small>
+            </p>
         </div>
     </div>
 </footer>
