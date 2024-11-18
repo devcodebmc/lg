@@ -1,4 +1,4 @@
-<div class="uk-text-center uk-margin-large-top" id="contacto">
+<div class="uk-text-center uk-margin-large-top uk-padding" id="contacto">
     <h2 class="contact-heading">Contáctanos</h2>
 
     <div class="uk-flex uk-flex-center">

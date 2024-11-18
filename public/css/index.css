@@ -80,16 +80,15 @@ h1, h2, h3, h4, h5, h6 {
     padding: 40px 0;
 }
 
-.service-section h2 {
+.service-section p {
     color: #c8b48f;
-    font-size: 1.25rem;
-    font-weight: bold;
+    font-size: 1.2rem;
     margin: 0;
 }
 
 .service-section h3 {
     color: #666666;
-    font-size: 1.625rem;
+    font-size: 2rem;
     font-weight: bold;
     margin-top: 5px;
     margin-bottom: 20px;
@@ -136,7 +135,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .modal-header h2.service-title {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: bold;
     color: #c8b48f;
 }
@@ -220,7 +219,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .banner-content-left h2 {
-    font-size: 2.365rem;
+    font-size: 2rem;
     margin: 0;
     color: #FFF;
 }
@@ -326,7 +325,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .reviews-header .reviews-title {
-    font-size:  2.765rem;
+    font-size:  2rem;
     font-weight: bold;
     margin-top: 0.5rem;
     color: #666666;
@@ -375,7 +374,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .clients-title {
-    font-size: 2.765rem;
+    font-size: 2rem;
     font-weight: bold;
     color: #666666;
     margin-bottom: 20px;
@@ -423,7 +422,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 /* Contact Form Styles */
 .contact-heading {
-    font-size: 2.765rem !important;
+    font-size: 2rem !important;
     color: #666666 !important;
     font-weight: bold;
 }
@@ -520,11 +519,11 @@ h1, h2, h3, h4, h5, h6 {
         margin-top: 20px;
     }
     .lg-slider p {
-        font-size: 0.7rem;
+        font-size: 0.9rem;
     }
     .lg-slider a {
         font-size: 0.6rem;
-        line-height: 20px;
+        line-height: 12px;
         margin-top: -10px;
     }
     .lg-desc {

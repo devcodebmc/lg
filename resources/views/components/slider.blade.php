@@ -14,9 +14,9 @@
 
     <!-- Text overlay content -->
     <div class="uk-overlay uk-position-center-left uk-text-left uk-light uk-margin-large-left">
-        <h1 class="uk-text-bold lg-main-title">REMODELAMOS <br>TU ESPACIO?</h1>
-        <p style="color: #FFFFFF">
-            Renueva cada rincón de tu hogar con expertos <br> en diseño y remodelación de alta calidad.
+        <h1 class="uk-text-bold lg-main-title uk-margin-remove-bottom">REMODELAMOS <br>TU ESPACIO?</h1>
+        <p class="uk-margin-remove-top" style="color: #FFFFFF">
+            Renueva cada rincón de tu hogar con expertos en diseño y remodelación de alta calidad.
         </p>
         <a href="#servicios" uk-scroll class="uk-button uk-button-default uk-text-bold" 
             style="background: #FFFFFF; color: #707070;">

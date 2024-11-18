@@ -1,7 +1,7 @@
 <div class="uk-section uk-section-default service-section" id="servicios">
     <!-- Títulos de la sección -->
-    <h2>NUESTROS SERVICIOS</h2>
-    <h3>SERVICIOS QUE OFRECEMOS</h3>
+    <p>Nuestros Servicios</p>
+    <h3>Servicios Que Ofrecemos</h3>
 
     <!-- Contenedor de los servicios en cuadrícula -->
     <div class="uk-container">
