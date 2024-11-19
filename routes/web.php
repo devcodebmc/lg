@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\BudgetController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,3 +24,5 @@ Route::get('/proyectos', function () {
 })->name('proyects');
 
 Route::post('/contact/send', [ContactController::class, 'send'])->name('contact.send');
+Route::post('/budget/send', [BudgetController::class, 'send'])->name('budget.send');
+

@@ -11,36 +11,37 @@
                 <h2 class="uk-text-bold">Solicita tu Cotización</h2>
                 <p>Por favor completa los siguientes campos para obtener una cotización personalizada para tu proyecto de construcción o remodelación.</p>
                 
-                <form class="uk-form-stacked">
+                <form action="{{ route('budget.send') }}" method="POST" class="uk-form-stacked">
+                    @csrf
                     <!-- Nombre Completo -->
                     <div class="uk-margin">
                         <label class="uk-form-label" for="nombre">Nombre Completo</label>
                         <div class="uk-form-controls">
-                            <input class="uk-input uk-form-small" id="nombre" type="text" placeholder="Tu nombre completo" required>
+                            <input class="uk-input uk-form-small" id="nombre" name="nombre" type="text" placeholder="Tu nombre completo" required>
                         </div>
                     </div>
-
+                
                     <!-- Correo Electrónico -->
                     <div class="uk-margin">
                         <label class="uk-form-label" for="correo">Correo Electrónico</label>
                         <div class="uk-form-controls">
-                            <input class="uk-input uk-form-small" id="correo" type="email" placeholder="correo@ejemplo.com" required>
+                            <input class="uk-input uk-form-small" id="correo" name="correo" type="email" placeholder="correo@ejemplo.com" required>
                         </div>
                     </div>
-
+                
                     <!-- Teléfono -->
                     <div class="uk-margin">
                         <label class="uk-form-label" for="telefono">Teléfono</label>
                         <div class="uk-form-controls">
-                            <input class="uk-input uk-form-small" id="telefono" type="tel" placeholder="5589653091" required>
+                            <input class="uk-input uk-form-small" id="telefono" name="telefono" type="tel" placeholder="5589653091" required>
                         </div>
                     </div>
-
+                
                     <!-- Tipo de Servicio -->
                     <div class="uk-margin">
                         <label class="uk-form-label" for="servicio">Tipo de Servicio</label>
                         <div class="uk-form-controls">
-                            <select class="uk-select uk-form-small" id="servicio" required>
+                            <select class="uk-select uk-form-small" id="servicio" name="servicio" required>
                                 <option value="" disabled selected>Selecciona el tipo de servicio</option>
                                 <option value="construccion">Construcción</option>
                                 <option value="remodelacion">Remodelación</option>
@@ -48,44 +49,45 @@
                             </select>
                         </div>
                     </div>
-
+                
                     <!-- Área Aproximada en m² -->
                     <div class="uk-margin">
                         <label class="uk-form-label" for="area">Área Aproximada (m²)</label>
                         <div class="uk-form-controls">
-                            <input class="uk-input uk-form-small" id="area" type="number" placeholder="Área aproximada en m²" required min="0">
+                            <input class="uk-input uk-form-small" id="area" name="area" type="number" placeholder="Área aproximada en m²" required min="0">
                         </div>
                     </div>
-
+                
                     <!-- Materiales Preferidos -->
                     <div class="uk-margin">
                         <label class="uk-form-label" for="materiales">Materiales Preferidos</label>
                         <div class="uk-form-controls">
-                            <textarea class="uk-textarea uk-form-small" id="materiales" rows="3" placeholder="Especifica si tienes preferencias de materiales (opcional)"></textarea>
+                            <textarea class="uk-textarea uk-form-small" id="materiales" name="materiales" rows="3" placeholder="Especifica si tienes preferencias de materiales (opcional)"></textarea>
                         </div>
                     </div>
-
+                
                     <!-- Presupuesto Estimado -->
                     <div class="uk-margin">
                         <label class="uk-form-label" for="presupuesto">Presupuesto Estimado</label>
                         <div class="uk-form-controls">
-                            <input class="uk-input uk-form-small" id="presupuesto" type="number" placeholder="Indica tu presupuesto estimado (opcional)">
+                            <input class="uk-input uk-form-small" id="presupuesto" name="presupuesto" type="number" placeholder="Indica tu presupuesto estimado (opcional)">
                         </div>
                     </div>
-
+                
                     <!-- Mensaje Adicional -->
                     <div class="uk-margin">
                         <label class="uk-form-label" for="mensaje">Descripción Adicional</label>
                         <div class="uk-form-controls">
-                            <textarea class="uk-textarea uk-form-small" id="mensaje" rows="5" placeholder="Proporciona detalles adicionales sobre tu proyecto"></textarea>
+                            <textarea class="uk-textarea uk-form-small" id="mensaje" name="mensaje" rows="5" placeholder="Proporciona detalles adicionales sobre tu proyecto"></textarea>
                         </div>
                     </div>
-
+                
                     <!-- Botón de Enviar -->
                     <div class="uk-margin">
                         <button type="submit" class="uk-button uk-button-primary uk-width-1-1">Solicitar Cotización</button>
                     </div>
                 </form>
+                
             </div>
         </div>
     </div>

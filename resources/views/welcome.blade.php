@@ -16,6 +16,22 @@
     </div>
 @endif
 
+@if (session('success-cot'))
+    <div class="uk-alert-success uk-position-z-index uk-align-center uk-text-center" uk-alert>
+        <a class="uk-alert-close" uk-close></a>
+        {{ session('success-cot') }}
+    </div>
+@endif
+
+@if (session('error-cot'))
+    <div class="uk-alert-danger uk-position-z-index uk-align-center uk-text-center" uk-alert>
+        <a class="uk-alert-close" uk-close></a>
+        {{ session('error-cot') }}
+    </div>
+@endif
+
+
+
 
 @include('components.slider')
 @include('partials.description')
