@@ -74,13 +74,15 @@
                         <h3>Contáctanos</h3>
                         <p>
                             <strong>Teléfono:</strong> 
-                            <a href="tel:+123456789">+1 234 567 89</a>
+                            <a href="tel:+525515659700">+52 5515659700</a>
                         </p>
                         <p>
                             <strong>Correo electrónico:</strong> 
-                            <a href="mailto:info@construccionlg.com">info@construccionlg.com</a>
+                            <a href="mailto:info@construccionlg.com">
+                                info@construccionyremodelacionlg.com
+                            </a>
                         </p>
-                        <a href="https://wa.me/123456789" target="_blank" 
+                        <a href="https://wa.me/+525515659700" target="_blank" 
                             class="uk-button uk-button-primary uk-width-1-1">
                             <span uk-icon="whatsapp"></span> Hablemos de tu proyecto!
                         </a>
