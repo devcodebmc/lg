@@ -6,7 +6,7 @@
 <div class="uk-grid-divider uk-grid-small uk-child-width-1-3@m uk-grid uk-padding" uk-grid>
     <!-- Columna izquierda: Información General -->
     <div>
-        <h3 class="uk-heading-bullet uk-text-base">Información General</h3>
+        <h3 class="uk-text-base">Información General</h3>
         <ul class="uk-list uk-list-divider">
             <li><span uk-icon="location" class="uk-text-base-brown"></span>
                 <strong>Ubicación:</strong> Periférico Sur #4271, Fuentes del Pedregal, CDMX
