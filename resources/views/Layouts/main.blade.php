@@ -52,6 +52,14 @@
     
     <script src="{{ asset('js/uikit.min.js') }}"></script>
     <script src="{{ asset('js/uikit-icons.min.js') }}"></script>
+    <script>
+        // Funcion para usar loading lazy soobre todas las imagenes con js 
+        const images = document.querySelectorAll('img');
+        images.forEach(image => {
+            image.setAttribute('loading', 'lazy');
+        });
+        
+    </script>
     @stack('js')
 </body>
 </html>
