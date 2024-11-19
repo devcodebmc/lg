@@ -12,9 +12,9 @@
                 <!-- Proyecto 1 (imagen principal) -->
                 <div class="project project-main">
                     <div class="uk-inline-clip uk-transition-toggle" tabindex="0">
-                        <img src="https://primerplano.com.mx/wp-content/uploads/2023/04/Origina_Pedregal_00.jpg" alt="Origen Pedregal">
+                        <img src="{{ asset('images/miki.jpg') }}" alt="Origen Pedregal">
                         <div class="uk-transition-fade uk-position-cover uk-overlay uk-overlay-primary uk-flex uk-flex-center uk-flex-middle">
-                            <p class="uk-h4">Origen Pedregal</p>
+                            <p class="uk-h4">Pintura en fachada óptica MIKITA cdmx</p>
                         </div>
                     </div>
                 </div>
@@ -22,9 +22,9 @@
                 <!-- Proyecto 2 -->
                 <div class="project">
                     <div class="uk-inline-clip uk-transition-toggle" tabindex="0">
-                        <img src="https://images.unsplash.com/photo-1719381502987-058c2140df08?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Residencia Rincón">
+                        <img src="{{ asset('images/malone.jpg') }}" alt="Residencia Rincón">
                         <div class="uk-transition-fade uk-position-cover uk-overlay uk-overlay-primary uk-flex uk-flex-center uk-flex-middle">
-                            <p class="uk-h4">Residencia Rincón</p>
+                            <p class="uk-h4">Jo Malone y Lamer perfumería Liverpool insurgentes CDMX</p>
                         </div>
                     </div>
                 </div>
@@ -32,9 +32,9 @@
                  <!-- Proyecto 3 -->
                  <div class="project">
                     <div class="uk-inline-clip uk-transition-toggle" tabindex="0">
-                        <img src="https://primerplano.com.mx/wp-content/uploads/2023/04/Origina_Pedregal_00.jpg" alt="Residencia Rincón">
+                        <img src="{{ asset('images/arqui.jpg') }}" alt="Residencia Rincón">
                         <div class="uk-transition-fade uk-position-cover uk-overlay uk-overlay-primary uk-flex uk-flex-center uk-flex-middle">
-                            <p class="uk-h4">Residencia Rincón</p>
+                            <p class="uk-h4">Arquidiócesis de la CDMX 4o piso</p>
                         </div>
                     </div>
                 </div>
@@ -42,9 +42,9 @@
                 <!-- Proyecto 4 -->
                 <div class="project">
                     <div class="uk-inline-clip uk-transition-toggle" tabindex="0">
-                        <img src="https://images.pexels.com/photos/1571458/pexels-photo-1571458.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Residencia Rincón">
+                        <img src="{{ asset('images/pola.jpg') }}" alt="Residencia Rincón">
                         <div class="uk-transition-fade uk-position-cover uk-overlay uk-overlay-primary uk-flex uk-flex-center uk-flex-middle">
-                            <p class="uk-h4">Residencia Rincón</p>
+                            <p class="uk-h4">Tapial C.Dior Liverpool Polanco cdmx</p>
                         </div>
                     </div>
                 </div>
@@ -52,9 +52,9 @@
                 <!-- Proyecto 5 -->
                 <div class="project">
                     <div class="uk-inline-clip uk-transition-toggle" tabindex="0">
-                        <img src="https://images.pexels.com/photos/2251247/pexels-photo-2251247.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Residencia Rincón">
+                        <img src="{{ asset('images/cuart.jpg') }}" alt="Residencia Rincón">
                         <div class="uk-transition-fade uk-position-cover uk-overlay uk-overlay-primary uk-flex uk-flex-center uk-flex-middle">
-                            <p class="uk-h4">Residencia Rincón</p>
+                            <p class="uk-h4">Sysley Perfumería, Santa Fe CDMX</p>
                         </div>
                     </div>
                 </div>
@@ -62,9 +62,9 @@
                 <!-- Proyecto 6 -->
                 <div class="project">
                     <div class="uk-inline-clip uk-transition-toggle" tabindex="0">
-                        <img src="https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Residencia Rincón">
+                        <img src="{{ asset('images/pla.jpg') }}" alt="Residencia Rincón">
                         <div class="uk-transition-fade uk-position-cover uk-overlay uk-overlay-primary uk-flex uk-flex-center uk-flex-middle">
-                            <p class="uk-h4">Residencia Rincón</p>
+                            <p class="uk-h4">Plafón Carolina Herrera ph perisur cdmx</p>
                         </div>
                     </div>
                 </div>
