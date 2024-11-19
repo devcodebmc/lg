@@ -1,3 +1,7 @@
+@php
+    $isWelcomePage = Route::currentRouteName() === 'welcome';
+@endphp
+
 <div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
     <nav class="uk-navbar-container uk-navbar-transparent lg-navbar" style="background-color: rgba(0, 0, 0, 0.8);" uk-navbar>
         <!-- Centered Navbar Content -->
@@ -7,26 +11,24 @@
 
             <!-- Navigation Links (visible only on desktop) -->
             <ul class="uk-navbar-nav uk-visible@m">
-                <li><a href="{{ route('welcome') }}" uk-scroll class="uk-text-bold">INICIO</a></li>
+                <li><a href="{{ $isWelcomePage ? '#' : route('welcome') }}" uk-scroll class="uk-text-bold">INICIO</a></li>
                 <li>
-                    <a href="{{ route('welcome') }}#sobre-nosotros" uk-scroll class="uk-text-bold">
+                    <a href="{{ $isWelcomePage ? '#sobre-nosotros' : route('welcome') . '#sobre-nosotros' }}" uk-scroll class="uk-text-bold">
                         SOBRE NOSOTROS
                     </a>
                 </li>
                 <li>
-                    <a href="{{ route('welcome') }}#servicios" uk-scroll class="uk-text-bold">
+                    <a href="{{ $isWelcomePage ? '#servicios' : route('welcome') . '#servicios' }}" uk-scroll class="uk-text-bold">
                         SERVICIOS
                     </a>
                 </li>
                 <li>
-                    <a href="{{ route('welcome') }}#proyectos" uk-scroll class="uk-text-bold">
+                    <a href="{{ $isWelcomePage ? '#proyectos' : route('welcome') . '#proyectos' }}" uk-scroll class="uk-text-bold">
                         PROYECTOS
                     </a>
                 </li>
                 <li>
-                    <a href="#contacto" uk-scroll class="uk-text-bold">
-                        CONTACTO
-                    </a>
+                    <a href="#contacto" uk-scroll class="uk-text-bold">CONTACTO</a>
                 </li>
             </ul>
 
@@ -52,10 +54,10 @@
 
         <!-- Mobile Navigation Links -->
         <ul class="uk-nav uk-nav-default uk-margin-medium-top">
-            <li><a href="{{ route('welcome') }}" uk-scroll>INICIO</a></li>
-            <li><a href="{{ route('welcome') }}#sobre-nosotros" uk-scroll>SOBRE NOSOTROS</a></li>
-            <li><a href="{{ route('welcome') }}#servicios" uk-scroll>SERVICIOS</a></li>
-            <li><a href="{{ route('welcome') }}#proyectos" uk-scroll>PROYECTOS</a></li>
+            <li><a href="{{ $isWelcomePage ? '#' : route('welcome') }}" uk-scroll>INICIO</a></li>
+            <li><a href="{{ $isWelcomePage ? '#sobre-nosotros' : route('welcome') . '#sobre-nosotros' }}" uk-scroll>SOBRE NOSOTROS</a></li>
+            <li><a href="{{ $isWelcomePage ? '#servicios' : route('welcome') . '#servicios' }}" uk-scroll>SERVICIOS</a></li>
+            <li><a href="{{ $isWelcomePage ? '#proyectos' : route('welcome') . '#proyectos' }}" uk-scroll>PROYECTOS</a></li>
             <li><a href="#contacto" uk-scroll>CONTACTO</a></li>
         </ul>
 

@@ -1,3 +1,6 @@
+@php
+    $isWelcomePage = Route::currentRouteName() === 'welcome';
+@endphp
 <footer class="uk-section uk-section-secondary uk-light uk-margin-large-top">
     <div class="uk-container uk-container-expand">
         <div class="uk-grid-divider uk-child-width-1-3@s uk-text-center" uk-grid>
@@ -25,9 +28,9 @@
         <div class="uk-text-center uk-margin-top">
             <ul class="uk-subnav uk-subnav-divider uk-flex-center">
                 <li><a href="{{ route('welcome') }}">INICIO</a></li>
-                <li><a href="{{ route('welcome') }}#sobre-nosotros" uk-scroll>SOBRE NOSOTROS</a></li>
-                <li><a href="{{ route('welcome') }}#servicios" uk-scroll>SERVICIOS</a></li>
-                <li><a href="{{ route('welcome') }}#proyectos" uk-scroll>PROYECTOS</a></li>
+                <li><a href="{{ $isWelcomePage ? '#sobre-nosotros' : route('welcome') . '#sobre-nosotros' }}" uk-scroll>SOBRE NOSOTROS</a></li>
+                <li><a href="{{ $isWelcomePage ? '#servicios' : route('welcome') . '#servicios' }}" uk-scroll>SERVICIOS</a></li>
+                <li><a href="{{ $isWelcomePage ? '#proyectos' : route('welcome') . '#proyectos' }}" uk-scroll>PROYECTOS</a></li>
                 <li><a href="#contacto" uk-scroll>CONTACTO</a></li>
             </ul>
         </div>
