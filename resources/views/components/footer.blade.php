@@ -28,7 +28,7 @@
                 <li><a href="{{ route('welcome') }}#sobre-nosotros" uk-scroll>SOBRE NOSOTROS</a></li>
                 <li><a href="{{ route('welcome') }}#servicios" uk-scroll>SERVICIOS</a></li>
                 <li><a href="{{ route('welcome') }}#proyectos" uk-scroll>PROYECTOS</a></li>
-                <li><a href="{{ route('welcome') }}#contacto" uk-scroll>CONTACTO</a></li>
+                <li><a href="#contacto" uk-scroll>CONTACTO</a></li>
             </ul>
         </div>
         
