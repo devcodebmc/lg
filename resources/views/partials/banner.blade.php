@@ -16,7 +16,7 @@
             <span class="uk-margin-small-left" style="font-size: 1rem; font-weight: bold;">
                 Llama Ya!
                 <br>
-                +52 558 903 4789
+                +52 55 1565 9700
             </span>
         </div>
     </div>

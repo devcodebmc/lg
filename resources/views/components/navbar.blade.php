@@ -7,11 +7,27 @@
 
             <!-- Navigation Links (visible only on desktop) -->
             <ul class="uk-navbar-nav uk-visible@m">
-                <li><a href="{{ route('welcome') }}" class="uk-text-bold">INICIO</a></li>
-                <li><a href="#sobre-nosotros" uk-scroll class="uk-text-bold">SOBRE NOSOTROS</a></li>
-                <li><a href="#servicios" uk-scroll class="uk-text-bold">SERVICIOS</a></li>
-                <li><a href="#proyectos" uk-scroll class="uk-text-bold">PROYECTOS</a></li>
-                <li><a href="#contacto" uk-scroll class="uk-text-bold">CONTACTO</a></li>
+                <li><a href="{{ route('welcome') }}" uk-scroll class="uk-text-bold">INICIO</a></li>
+                <li>
+                    <a href="{{ route('welcome') }}#sobre-nosotros" uk-scroll class="uk-text-bold">
+                        SOBRE NOSOTROS
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ route('welcome') }}#servicios" uk-scroll class="uk-text-bold">
+                        SERVICIOS
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ route('welcome') }}#proyectos" uk-scroll class="uk-text-bold">
+                        PROYECTOS
+                    </a>
+                </li>
+                <li>
+                    <a href="#contacto" uk-scroll class="uk-text-bold">
+                        CONTACTO
+                    </a>
+                </li>
             </ul>
 
             <!-- Presupuesto Button (visible only on desktop) -->
@@ -36,10 +52,10 @@
 
         <!-- Mobile Navigation Links -->
         <ul class="uk-nav uk-nav-default uk-margin-medium-top">
-            <li><a href="{{ route('welcome') }}">INICIO</a></li>
-            <li><a href="#sobre-nosotros" uk-scroll>SOBRE NOSOTROS</a></li>
-            <li><a href="#servicios" uk-scroll>SERVICIOS</a></li>
-            <li><a href="#proyectos" uk-scroll>PROYECTOS</a></li>
+            <li><a href="{{ route('welcome') }}" uk-scroll>INICIO</a></li>
+            <li><a href="{{ route('welcome') }}#sobre-nosotros" uk-scroll>SOBRE NOSOTROS</a></li>
+            <li><a href="{{ route('welcome') }}#servicios" uk-scroll>SERVICIOS</a></li>
+            <li><a href="{{ route('welcome') }}#proyectos" uk-scroll>PROYECTOS</a></li>
             <li><a href="#contacto" uk-scroll>CONTACTO</a></li>
         </ul>
 

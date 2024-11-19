@@ -11,12 +11,14 @@
                 
                 <!-- Proyecto 1 (imagen principal) -->
                 <div class="project project-main">
-                    <div class="uk-inline-clip uk-transition-toggle" tabindex="0">
-                        <img src="{{ asset('images/miki.jpg') }}" alt="Origen Pedregal">
-                        <div class="uk-transition-fade uk-position-cover uk-overlay uk-overlay-primary uk-flex uk-flex-center uk-flex-middle">
-                            <p class="uk-h4">Pintura en fachada óptica MIKITA cdmx</p>
+                    <a href="{{ route('proyects') }}">
+                        <div class="uk-inline-clip uk-transition-toggle" tabindex="0">
+                            <img src="{{ asset('images/miki.jpg') }}" alt="Origen Pedregal">
+                            <div class="uk-transition-fade uk-position-cover uk-overlay uk-overlay-primary uk-flex uk-flex-center uk-flex-middle">
+                                <p class="uk-h4">Pintura en fachada óptica MIKITA CDMX</p>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
 
                 <!-- Proyecto 2 -->

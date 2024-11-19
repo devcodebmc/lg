@@ -261,7 +261,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .projects-header .projects-subtitle {
-    color: #B8A680;
+    color: #c8b48f;
     font-size: 1.2rem;
     margin: 0;
 }
@@ -319,7 +319,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .reviews-header .reviews-subtitle {
-    color: #B8A680;
+    color: #c8b48f;
     font-size: 1.2rem;
     margin: 0;
 }
@@ -349,7 +349,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .review-item span {
-    color: #B8A680;
+    color: #c8b48f;
 }
 
 .review-avatar {
@@ -401,7 +401,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Faq Styles */
 .uk-container h2 {
-    color: #D6B67E;
+    color: #c8b48f;
     font-size: 1.8rem;
     font-weight: bold;
 }
@@ -495,13 +495,53 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .social-icon {
-    color: #d6b67e !important;
+    color: #c8b48f !important;
     transition: color 0.3s ease;
 }
 .social-icon:hover {
     color: #ffffff !important; 
 }
 
+/* Proyects page styles */
+.lg-list-filter .uk-active a {
+    color: #826363; 
+    font-weight: bold;
+    text-decoration: none; 
+}
+#more-proyects img {
+    object-fit: cover;
+    border-radius: 5px;
+}
+.uk-overlay {
+    padding: 10px;
+}
+
+/* WhatsappButton Styles */
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px; /* Espaciado desde la parte inferior */
+    right: 20px;  /* Espaciado desde la derecha */
+    z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
+    width: 60px; /* Tamaño del botón */
+    height: 60px;
+    border-radius: 50%; /* Botón redondo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+    background-color: #25D366; /* Color de fondo de WhatsApp */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.whatsapp-button img {
+    width: 70%; /* Tamaño del ícono */
+    height: 70%;
+}
+
+.whatsapp-button:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transform: scale(1.1); /* Pequeña animación al pasar el mouse */
+    transition: all 0.3s ease-in-out;
+}
 
 
 

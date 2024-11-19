@@ -44,5 +44,6 @@
 @include('partials.faq')
 @include('components.contactForm')
 @include('components.modalBudget')
+@include('components.whatsappButton')
 
 @endsection

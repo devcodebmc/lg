@@ -7644,6 +7644,12 @@ ul.uk-nav-sub {
 .uk-text-danger {
   color: #f0506e !important;
 }
+.uk-text-base {
+  color: #c8b48f !important;
+}
+.uk-text-base-brown {
+  color: #826363 !important;
+}
 /* Background modifier
  ========================================================================== */
 /*

@@ -10,7 +10,7 @@
             <div class="banner-content-right">
                 <p class="uk-text-bold">¡Llama ahora!</p>
                 <p class="uk-heading-small">
-                    +52 558 903 4789
+                    +52 5515659700
                 </p>
             </div>
         </div>

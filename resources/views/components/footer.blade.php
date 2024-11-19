@@ -25,10 +25,10 @@
         <div class="uk-text-center uk-margin-top">
             <ul class="uk-subnav uk-subnav-divider uk-flex-center">
                 <li><a href="{{ route('welcome') }}">INICIO</a></li>
-                <li><a href="#sobre-nosotros" uk-scroll>SOBRE NOSOTROS</a></li>
-                <li><a href="#servicios" uk-scroll>SERVICIOS</a></li>
-                <li><a href="#proyectos" uk-scroll>PROYECTOS</a></li>
-                <li><a href="#contacto" uk-scroll>CONTACTO</a></li>
+                <li><a href="{{ route('welcome') }}#sobre-nosotros" uk-scroll>SOBRE NOSOTROS</a></li>
+                <li><a href="{{ route('welcome') }}#servicios" uk-scroll>SERVICIOS</a></li>
+                <li><a href="{{ route('welcome') }}#proyectos" uk-scroll>PROYECTOS</a></li>
+                <li><a href="{{ route('welcome') }}#contacto" uk-scroll>CONTACTO</a></li>
             </ul>
         </div>
         
