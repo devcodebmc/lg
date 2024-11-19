@@ -59,7 +59,7 @@
 
         <!-- Video embebido -->
         <div class="uk-margin">
-            <iframe src="https://player.vimeo.com/video/123456789" width="100%" height="350" frameborder="0" allowfullscreen></iframe>
+            <video src="https://primerplano.com.mx/wp-content/uploads/2021/09/origina_pedregal.mp4" width="1800" height="1200" loop muted playsinline uk-video="autoplay: inview"></video>
         </div>
 
         <!-- Botones -->
