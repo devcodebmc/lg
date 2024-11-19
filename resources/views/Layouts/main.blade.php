@@ -45,6 +45,9 @@
         @yield('content')
     </section> 
 
+    @include('components.modalBudget')
+    @include('components.whatsappButton')
+
     @include('components.footer')
     
     <script src="{{ asset('js/uikit.min.js') }}"></script>
