@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('project_id');
             $table->string('image_path');
-            $table->string('data-category');
+            $table->string('category');
             $table->timestamps();
     
             $table->foreign('project_id')->references('id')->on('projects')->onDelete('cascade');
