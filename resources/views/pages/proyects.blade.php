@@ -63,7 +63,7 @@
         </div>
 
         <!-- Botones -->
-        <div class="uk-button-group uk-flex uk-flex-center">
+        <div class="uk-button-group uk-flex uk-flex-center lg-btn-group">
             <a href="#gallery" uk-scroll class="uk-button uk-button-small uk-margin-right uk-button-default uk-border-rounded uk-text-base-brown">Galería</a>
             <a href="#process" uk-scroll class="uk-button uk-button-small uk-margin-right uk-button-default uk-border-rounded uk-text-base-brown">Proceso</a>
             <a href="#more-proyects" uk-scroll class="uk-button uk-button-small uk-margin-right uk-button-default uk-border-rounded uk-text-base-brown">+Proyectos</a>
