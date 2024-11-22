@@ -23,6 +23,10 @@ Route::get('/proyectos', function () {
     return view('pages.proyects');
 })->name('proyects');
 
+Route::get('/projects/create', function () {
+    return view('backend.projects.createProject');
+})->name('projects.create');
+
 Route::post('/contact/send', [ContactController::class, 'send'])->name('contact.send');
 Route::post('/budget/send', [BudgetController::class, 'send'])->name('budget.send');
 
