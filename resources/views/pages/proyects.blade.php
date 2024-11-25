@@ -21,7 +21,9 @@
                 <strong>Fecha de Entrega:</strong>
                 @if ($project->delivery_date)
                     <ul class="uk-list">
-                        <li>{{ \Carbon\Carbon::parse($project->delivery_date)->format('Y') }} - {{ $project->delivery_date ? 'Concluido' : 'Pendiente' }}</li>
+                        <li>{{ \Carbon\Carbon::parse($project->delivery_date)->translatedFormat('j \d\e F \d\e Y') }}
+                            - {{ $project->delivery_date ? 'Concluido' : 'Pendiente' }}
+                        </li>
                     </ul>
                 @else
                     <p>No disponible</p>
@@ -72,7 +74,7 @@
 @include('components.process', ['project' => $project])
 
 <!-- Proyectos relacionados -->
-@include('components.slideProyects', ['project' => $project])
+@include('components.slideProyects', ['relatedProjects' => $relatedProjects])
 
 <!-- Formulario de contacto -->
 @include('components.contactForm')

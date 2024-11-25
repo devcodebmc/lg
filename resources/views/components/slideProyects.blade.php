@@ -5,16 +5,21 @@
 
         <div class="uk-slider-items uk-grid-small uk-child-width-1-2@s uk-child-width-1-3@m">
             <!-- Proyecto 1 -->
-            <div>
-                <div class="uk-panel">
-                    <img src="{{ asset('images/malone.jpg') }}" alt="" width="600" height="400">
-                    <div class="uk-overlay uk-overlay-primary uk-position-bottom uk-text-center uk-transition-slide-bottom">
-                        <h4 class="uk-margin-remove">Proyecto 1</h4>
-                        <p class="uk-margin-remove">Descripción breve del proyecto.</p>
+            @foreach ($relatedProjects as $relatedProject)
+                <div>
+                    <div class="uk-panel">
+                        <img src="{{ asset('storage/' . $relatedProject->cover_image) }}" 
+                            alt="{{ $relatedProject->title }}" 
+                            width="600" 
+                            height="400">
+                        <div class="uk-overlay uk-overlay-primary uk-position-bottom uk-text-center uk-transition-slide-bottom">
+                            <h4 class="uk-margin-remove">{{ $relatedProject->title }}</h4>
+                            {{-- <p class="uk-margin-remove">{{ $relatedProject->description }}</p> --}}
+                        </div>
                     </div>
                 </div>
-            </div>
-            <!-- Proyecto 2 -->
+            @endforeach
+            {{-- <!-- Proyecto 2 -->
             <div>
                 <div class="uk-panel">
                     <img src="{{ asset('images/arqui.jpg') }}" alt="" width="600" height="400">
@@ -63,7 +68,8 @@
                         <p class="uk-margin-remove">Descripción breve del proyecto.</p>
                     </div>
                 </div>
-            </div>
+            </div> --}}
+
         </div>
 
         <!-- Navegación -->
