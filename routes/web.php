@@ -6,6 +6,7 @@ use App\Http\Controllers\BudgetController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\FrontController;
 use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\SecondaryImageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -44,6 +45,9 @@ Route::middleware('auth')->group(function () {
         Route::get('/projects/edit/{project}', [ProjectController::class, 'edit'])->name('projects.edit');
         Route::put('/projects/update/{project}', [ProjectController::class, 'update'])->name('projects.update');
         // Más rutas protegidas
+        Route::get('/secondary-images/{project}', [SecondaryImageController::class, 'index'])->name('secondary-images.index');
+        Route::post('/secondary-images/store/{project}', [SecondaryImageController::class,'store'])->name('secondary-images.store');
+        Route::delete('/secondary-images/delete/{project}/{image}', [SecondaryImageController::class, 'destroy'])->name('secondary-images.destroy');
     });
 });
 

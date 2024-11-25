@@ -58,7 +58,8 @@ class ProjectController extends Controller
             }
         }
 
-        return redirect()->route('projects.index')->with('success', 'Proyecto creado exitosamente.');
+        return redirect()->route('secondary-images.index', ['project' => $project])
+        ->with('success', 'Proyecto creado exitosamente.');
     }
 
     // Mostrar detalles de un proyecto

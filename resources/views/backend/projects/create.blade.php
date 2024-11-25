@@ -119,9 +119,6 @@
                 </div>
                 <select class="uk-select uk-margin-top" id="finishes" 
                         name="finishes[]" multiple>
-                    <option value="Madera">Madera</option>
-                    <option value="Metal">Metal</option>
-                    <option value="Vidrio">Vidrio</option>
                 </select>
             </div>
 
@@ -139,9 +136,6 @@
                 </div>
                 <select class="uk-select uk-margin-top" id="proceedings" 
                         name="proceedings[]" multiple>
-                    <option value="Instalación Eléctrica">Instalación Eléctrica</option>
-                    <option value="Plomería">Plomería</option>
-                    <option value="Pintura">Pintura</option>
                 </select>
             </div>
         </div>
