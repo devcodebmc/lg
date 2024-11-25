@@ -46,7 +46,7 @@
                         <td>{{ $project->delivery_date }}</td>
 
                         <td>
-                            <a href="#" uk-icon="icon: pencil" title="Editar"></a>
+                            <a href="{{ route('projects.edit', ['project' => $project->id]) }}" uk-icon="icon: pencil" title="Editar"></a>
                             <form action="#" method="POST" style="display:inline-block;">
                                 @csrf
                                 @method('DELETE')

@@ -12,9 +12,7 @@ class SecondaryImage extends Model
     protected $fillable = ['project_id', 'image_path', 'category'];
 
     protected $casts = [
-        'finishes' => 'array',
-        'proceedings' => 'array',
-        'delivery_date' => 'datetime', // Agregado para convertir automáticamente a Carbon
+        'category' => 'array',
     ];
 
     public function project()

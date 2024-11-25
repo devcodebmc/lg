@@ -4,7 +4,7 @@
 
 <div class="uk-container">
 
-    <h2 class="uk-heading-line uk-text-center"><span>Agregar Proyecto</span></h2>
+    <h2 class="uk-heading-line uk-text-center"><span>Editar Proyecto</span></h2>
 
     @if(session('success'))
         <div class="uk-alert-success" uk-alert>
@@ -21,55 +21,62 @@
             </ul>
         </div>
     @endif
-
-    <form action="{{ route('projects.store') }}" method="POST" 
+    
+    <form action="{{ route('projects.update', $project->id) }}" method="POST" 
             enctype="multipart/form-data" 
             class="uk-form-stacked uk-margin-large-top">
         @csrf
-        @method('post')
+        @method('PUT')
 
         <div class="uk-grid-small uk-child-width-1-2@s uk-child-width-1-3@m" uk-grid>
             <!-- Título del proyecto -->
             <div>
                 <label class="uk-form-label" for="title">Título del proyecto</label>
-                <input class="uk-input" id="title" type="text" name="title" placeholder="Título del proyecto">
+                <input class="uk-input" id="title" type="text" name="title" 
+                       value="{{ old('title', $project->title) }}" placeholder="Título del proyecto">
             </div>
 
             <!-- Ubicación -->
             <div>
                 <label class="uk-form-label" for="location">Ubicación</label>
-                <input class="uk-input" id="location" type="text" name="location" placeholder="Ubicación">
+                <input class="uk-input" id="location" type="text" name="location" 
+                       value="{{ old('location', $project->location) }}" placeholder="Ubicación">
             </div>
 
             <!-- Responsable -->
             <div>
                 <label class="uk-form-label" for="manager">Responsable</label>
-                <input class="uk-input" id="manager" type="text" name="manager" placeholder="Responsable">
+                <input class="uk-input" id="manager" type="text" name="manager" 
+                       value="{{ old('manager', $project->manager) }}" placeholder="Responsable">
             </div>
 
             <!-- Tipo de proyecto -->
             <div>
                 <label class="uk-form-label" for="type">Tipo de proyecto</label>
-                <input class="uk-input" id="type" type="text" name="type" placeholder="Tipo de proyecto">
+                <input class="uk-input" id="type" type="text" name="type" 
+                       value="{{ old('type', $project->type) }}" placeholder="Tipo de proyecto">
             </div>
 
             <!-- Fecha de entrega -->
             <div>
                 <label class="uk-form-label" for="delivery_date">Fecha de entrega</label>
-                <input class="uk-input" id="delivery_date" type="date" name="delivery_date">
+                <input class="uk-input" id="delivery_date" type="date" name="delivery_date" 
+                       value="{{ old('delivery_date', $project->delivery_date) }}">
             </div>
 
             <!-- Video principal -->
             <div>
                 <label class="uk-form-label" for="cover_video">URL del video (opcional)</label>
-                <input class="uk-input" id="cover_video" type="text" name="cover_video" placeholder="URL del video (opcional)">
+                <input class="uk-input" id="cover_video" type="text" name="cover_video" 
+                       value="{{ old('cover_video', $project->cover_video) }}" placeholder="URL del video (opcional)">
             </div>
         </div>
 
         <!-- Descripción -->
         <div class="uk-margin uk-width-expand">
             <label class="uk-form-label" for="description">Descripción</label>
-            <textarea class="uk-textarea" id="description" name="description" rows="4" placeholder="Descripción"></textarea>
+            <textarea class="uk-textarea" id="description" name="description" rows="4" 
+                      placeholder="Descripción">{{ old('description', $project->description) }}</textarea>
         </div>
 
         <hr class=" uk-divider-icon">
@@ -83,8 +90,8 @@
                     <input type="file" id="cover_image" name="cover_image" accept="image/*" onchange="previewImage(event, 'cover_image_preview')">
                     <input class="uk-input uk-form-width-large" type="text" placeholder="Seleccionar archivo" disabled>
                 </div>
-                <div id="cover_image_preview" style="margin-top: 10px; display: none;">
-                    <img src="" alt="Vista previa imagen principal" style="max-width: 100%; height: auto;">
+                <div id="cover_image_preview" style="margin-top: 10px; display: {{ $project->cover_image ? 'block' : 'none' }}">
+                    <img src="{{ $project->cover_image ? asset('storage/' . $project->cover_image) : '' }}" alt="Vista previa imagen principal" style="width: 150px; height: auto;">
                 </div>
             </div>
 
@@ -95,7 +102,10 @@
                     <input type="file" id="secondary_images" name="secondary_images[]" multiple onchange="previewSecondaryImages(event)">
                     <input class="uk-input uk-form-width-large" type="text" placeholder="Seleccionar archivos" disabled>
                 </div>
-                <div id="secondary_images_preview" style="margin-top: 10px; display: none;">
+                <div id="secondary_images_preview" style="margin-top: 10px;">
+                    @foreach ($project->secondaryImages as $image)
+                        <img src="{{ asset('storage/' . $image->image_path) }}" style="max-width: 150px; margin-right: 10px; margin-top: 10px;">
+                    @endforeach
                     <div id="secondary_images_list"></div>
                 </div>
             </div>
@@ -119,9 +129,9 @@
                 </div>
                 <select class="uk-select uk-margin-top" id="finishes" 
                         name="finishes[]" multiple>
-                    <option value="Madera">Madera</option>
-                    <option value="Metal">Metal</option>
-                    <option value="Vidrio">Vidrio</option>
+                    @foreach ($project->finishes ?? '[]' as $finish)
+                        <option value="{{ $finish }}" selected>{{ $finish }}</option>
+                    @endforeach
                 </select>
             </div>
 
@@ -139,9 +149,9 @@
                 </div>
                 <select class="uk-select uk-margin-top" id="proceedings" 
                         name="proceedings[]" multiple>
-                    <option value="Instalación Eléctrica">Instalación Eléctrica</option>
-                    <option value="Plomería">Plomería</option>
-                    <option value="Pintura">Pintura</option>
+                    @foreach ($project->proceedings ?? '[]' as $proceeding)
+                        <option value="{{ $proceeding }}" selected>{{ $proceeding }}</option>
+                    @endforeach
                 </select>
             </div>
         </div>
@@ -150,12 +160,12 @@
         <div class="uk-margin">
             <button type="submit" 
                 class="uk-button uk-button-primary uk-margin-small-top s-width">
-                Guardar Proyecto
+                Actualizar Proyecto
             </button>
-            <button type="reset" 
-                class="uk-button uk-button-danger uk-margin-small-top s-width">
-                Limpiar
-            </button>
+            <a href="{{ route('projects.index') }}" 
+               class="uk-button uk-button-danger uk-margin-small-top s-width">
+               Cancelar
+            </a>
         </div>
     </form>
 </div>
