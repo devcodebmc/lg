@@ -18,7 +18,7 @@ class ProjectController extends Controller
     // Mostrar formulario para crear un proyecto
     public function create()
     {
-        return view('backend.projects.createProject');
+        return view('backend.projects.create');
     }
 
     // Guardar un nuevo proyecto
