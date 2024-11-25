@@ -29,12 +29,13 @@
                         </td>
                         <td>
                             <select class="uk-select uk-margin-top" id="proceedings" name="proceedings[]" multiple>
-                                @foreach ($proceedings ?? [] as $pro)
+                                @foreach ($proceedings as $pro)
                                     <option value="{{ $pro }}" selected>
                                         {{ $pro }}
                                     </option>
                                 @endforeach
                             </select>
+                            
                             
                         </td>
                         <td>
