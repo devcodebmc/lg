@@ -2,10 +2,29 @@
 
 @section('content')
 
-<div class="uk-container uk-margin-top">
+<div class="uk-container">
+
     <h2 class="uk-heading-line uk-text-center"><span>Agregar Proyecto</span></h2>
 
-    <form action="#" method="POST" enctype="multipart/form-data" class="uk-form-stacked uk-margin-large-top">
+    @if(session('success'))
+        <div class="uk-alert-success" uk-alert>
+            {{ session('success') }}
+        </div>
+    @endif
+
+    @if ($errors->any())
+        <div class="uk-alert-danger" uk-alert>
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+
+    <form action="{{ route('projects.store') }}" method="POST" 
+            enctype="multipart/form-data" 
+            class="uk-form-stacked uk-margin-large-top">
         @csrf
         @method('post')
 
@@ -13,31 +32,31 @@
             <!-- Título del proyecto -->
             <div>
                 <label class="uk-form-label" for="title">Título del proyecto</label>
-                <input class="uk-input" id="title" type="text" name="title" placeholder="Título del proyecto" required>
+                <input class="uk-input" id="title" type="text" name="title" placeholder="Título del proyecto">
             </div>
 
             <!-- Ubicación -->
             <div>
                 <label class="uk-form-label" for="location">Ubicación</label>
-                <input class="uk-input" id="location" type="text" name="location" placeholder="Ubicación" required>
+                <input class="uk-input" id="location" type="text" name="location" placeholder="Ubicación">
             </div>
 
             <!-- Responsable -->
             <div>
                 <label class="uk-form-label" for="manager">Responsable</label>
-                <input class="uk-input" id="manager" type="text" name="manager" placeholder="Responsable" required>
+                <input class="uk-input" id="manager" type="text" name="manager" placeholder="Responsable">
             </div>
 
             <!-- Tipo de proyecto -->
             <div>
                 <label class="uk-form-label" for="type">Tipo de proyecto</label>
-                <input class="uk-input" id="type" type="text" name="type" placeholder="Tipo de proyecto" required>
+                <input class="uk-input" id="type" type="text" name="type" placeholder="Tipo de proyecto">
             </div>
 
             <!-- Fecha de entrega -->
             <div>
                 <label class="uk-form-label" for="delivery_date">Fecha de entrega</label>
-                <input class="uk-input" id="delivery_date" type="datetime-local" name="delivery_date" required>
+                <input class="uk-input" id="delivery_date" type="datetime-local" name="delivery_date">
             </div>
 
             <!-- Video principal -->
@@ -61,7 +80,7 @@
             <div class="uk-width-1-2@s">
                 <label class="uk-form-label" for="cover_image">Imagen principal</label>
                 <div uk-form-custom="target: true">
-                    <input type="file" id="cover_image" name="cover_image" onchange="previewImage(event, 'cover_image_preview')">
+                    <input type="file" id="cover_image" name="cover_image" accept="image/*" onchange="previewImage(event, 'cover_image_preview')">
                     <input class="uk-input uk-form-width-large" type="text" placeholder="Seleccionar archivo" disabled>
                 </div>
                 <div id="cover_image_preview" style="margin-top: 10px; display: none;">
@@ -143,19 +162,20 @@
 
 @push('jsAdmin')
 <script>
+
     function addOption(selectId, inputId) {
         const select = document.getElementById(selectId);
         const input = document.getElementById(inputId);
         const newOption = input.value.trim();
 
-        if (newOption) {
+        if (newOption && ![...select.options].some(opt => opt.value === newOption)) {
             const option = document.createElement('option');
             option.value = newOption;
             option.textContent = newOption;
             select.appendChild(option);
             input.value = '';
         } else {
-            alert('Por favor, introduce un valor válido.');
+            alert('Por favor, introduce un valor válido o que no esté duplicado.');
         }
     }
 

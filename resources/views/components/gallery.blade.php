@@ -5,24 +5,14 @@
         uk-slideshow="animation: push; max-height: 500">
 
         <div class="uk-slideshow-items" style="max-width: 800px; margin: 0 auto;">
-            <!-- Imagen 1 -->
+            @foreach($project->secondaryImages as $image)
             <div>
                 <div class="uk-position-cover uk-animation-kenburns uk-animation-reverse uk-transform-origin-center-left">
-                    <img src="{{ asset('images/malone.jpg') }}" alt="Imagen 1" uk-cover>
+                    <img src="{{ asset('storage/' . $image->image_path) }}" 
+                        alt="{{ $project->title }}" uk-cover>
                 </div>
             </div>
-            <!-- Imagen 2 -->
-            <div>
-                <div class="uk-position-cover uk-animation-kenburns uk-animation-reverse uk-transform-origin-top-right">
-                    <img src="{{ asset('images/arqui.jpg') }}" alt="Imagen 2" uk-cover>
-                </div>
-            </div>
-            <!-- Imagen 3 -->
-            <div>
-                <div class="uk-position-cover uk-animation-kenburns uk-animation-reverse uk-transform-origin-bottom-left">
-                    <img src="{{ asset('images/pola.jpg') }}" alt="Imagen 3" uk-cover>
-                </div>
-            </div>
+            @endforeach
         </div>
 
         <!-- Botones de navegación -->

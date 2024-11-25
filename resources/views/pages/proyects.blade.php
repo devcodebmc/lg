@@ -1,6 +1,6 @@
 @extends('layouts.main')
 
-@section('title', '| proyectos')
+@section('title', "| {$project->title}")
 @section('content')
 
 <div class="uk-grid-divider uk-grid-small uk-child-width-1-3@m uk-grid uk-padding" uk-grid>
@@ -9,58 +9,52 @@
         <h3 class="uk-text-base">Información General</h3>
         <ul class="uk-list uk-list-divider">
             <li><span uk-icon="location" class="uk-text-base-brown"></span>
-                <strong>Ubicación:</strong> Periférico Sur #4271, Fuentes del Pedregal, CDMX
+                <strong>Ubicación:</strong> {{ $project->location }}
             </li>
             <li><span uk-icon="user" class="uk-text-base-brown"></span>
-                <strong>Arquitecto:</strong> Sordo Madaleno
+                <strong>Arquitecto:</strong> {{ $project->manager }}
             </li>
             <li><span uk-icon="home" class="uk-text-base-brown"></span>
-                <strong>Tipo de Proyecto:</strong> Residencia Vertical
+                <strong>Tipo de Proyecto:</strong> {{ $project->type }}
             </li>
             <li><span uk-icon="calendar" class="uk-text-base-brown"></span>
                 <strong>Fecha de Entrega:</strong>
-                <ul class="uk-list">
-                    <li>Torre A: 2021 - Concluido</li>
-                    <li>Torre B: 2021</li>
-                </ul>
+                @if ($project->delivery_date)
+                    <ul class="uk-list">
+                        <li>{{ \Carbon\Carbon::parse($project->delivery_date)->format('Y') }} - {{ $project->delivery_date ? 'Concluido' : 'Pendiente' }}</li>
+                    </ul>
+                @else
+                    <p>No disponible</p>
+                @endif
             </li>
             <li><span uk-icon="thumbnails" class="uk-text-base-brown"></span>
                 <strong>Acabados y Sistemas Instalados:</strong>
-                <ul class="uk-list lg-list">
-                    <li>
-                        <span uk-icon="chevron-double-right"></span> 
-                        Plafón WPC en terrazas.
-                    </li>
-                    <li>
-                        <span uk-icon="chevron-double-right"></span> 
-                        Plafón WPC en pasillos de comunicación.
-                    </li>
-                    <li>
-                        <span uk-icon="chevron-double-right"></span> 
-                        WPC amenities.
-                    </li>
-                    <li>
-                        <span uk-icon="chevron-double-right"></span> 
-                        Panel de aluminio ACP en terrazas.
-                    </li>
-                    <li>
-                        <span uk-icon="chevron-double-right"></span> 
-                        Recubrimiento STO Therm EIFS.
-                    </li>
-                </ul>
+                @if($project->finishes && count($project->finishes) > 0)
+                    <ul class="uk-list lg-list">
+                        @foreach($project->finishes as $finish)
+                            <li>
+                                <span uk-icon="chevron-double-right"></span> {{ $finish }}
+                            </li>
+                        @endforeach
+                    </ul>
+                @else
+                    <p>No disponible</p>
+                @endif
             </li>
         </ul>
     </div>
 
     <!-- Columna derecha: Contenido Principal -->
     <div class="uk-width-expand">
-        <h1 class="uk-heading-small uk-text-base">Pintura en fachada óptica MIKITA CDMX</h1>
-        <p>Origen Pedregal, ubicado en la mejor zona del sur de la Ciudad de México, desarrollo de vivienda constituido por dos torres de 34 niveles.</p>
+        <h1 class="uk-heading-small uk-text-base">{{ $project->title }}</h1>
+        <p>{{ $project->description }}</p>
 
         <!-- Video embebido -->
-        <div class="uk-margin">
-            <video src="https://primerplano.com.mx/wp-content/uploads/2021/09/origina_pedregal.mp4" width="1800" height="1200" loop muted playsinline uk-video="autoplay: inview"></video>
-        </div>
+        @if($project->cover_video)
+            <div class="uk-margin">
+                <video src="{{ $project->cover_video }}" width="1800" height="1200" loop muted playsinline uk-video="autoplay: inview"></video>
+            </div>
+        @endif
 
         <!-- Botones -->
         <div class="uk-button-group uk-flex uk-flex-center lg-btn-group">
@@ -71,10 +65,16 @@
     </div>
 </div>
 
-@include('components.gallery')
-@include('components.process')
-@include('components.slideProyects')
-@include('components.contactForm')
+<!-- Galería de imágenes secundarias -->
+@include('components.gallery', ['project' => $project])
 
+<!-- Proceso -->
+@include('components.process', ['project' => $project])
+
+<!-- Proyectos relacionados -->
+@include('components.slideProyects', ['project' => $project])
+
+<!-- Formulario de contacto -->
+@include('components.contactForm')
 
 @endsection

@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('location');
             $table->string('manager');
             $table->string('type');
-            $table->dateTime('delivery_date');
+            $table->date('delivery_date')->nullable();
             $table->string('cover_image')->nullable();
             $table->string('cover_video')->nullable();
             $table->json('finishes')->nullable(); // Para almacenar los acabados

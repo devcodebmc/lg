@@ -3,6 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\BudgetController;
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\FrontController;
+use App\Http\Controllers\ProjectController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,18 +18,30 @@ use App\Http\Controllers\BudgetController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('welcome');
-
-Route::get('/proyectos', function () {
-    return view('pages.proyects');
-})->name('proyects');
-
-Route::get('/projects/create', function () {
-    return view('backend.projects.createProject');
-})->name('projects.create');
+Route::get('/', [FrontController::class, 'index'])->name('welcome');
+Route::get('/proyectos/{slug}', [FrontController::class, 'show'])->name('showProject');
 
 Route::post('/contact/send', [ContactController::class, 'send'])->name('contact.send');
 Route::post('/budget/send', [BudgetController::class, 'send'])->name('budget.send');
+
+// Rutas de autenticación
+Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
+Route::post('/login', [AuthController::class, 'login']);
+Route::get('/register', [AuthController::class, 'showRegisterForm'])->name('register');
+Route::post('/register', [AuthController::class, 'register']);
+
+
+// Rutas protegidas
+Route::middleware('auth')->group(function () {
+    Route::prefix('admin')->middleware('role:admin')->group(function () {
+        Route::get('/dashboard', function () {
+            return view('backend.layouts.mainAdmin');
+        })->name('dashboard');
+        Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
+        Route::get('/projects', [ProjectController::class, 'index'])->name('projects.index');
+        Route::get('/projects/create', [ProjectController::class, 'create'])->name('projects.create');
+        Route::post('/projects/store', [ProjectController::class, 'store'])->name('projects.store');
+        // Más rutas protegidas
+    });
+});
 

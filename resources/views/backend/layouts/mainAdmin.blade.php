@@ -110,8 +110,15 @@
         <nav>
             <h1 class="uk-h4 uk-light uk-padding uk-margin-small-top">Panel Administrativo</h1>
             <ul class="uk-nav-default uk-nav-parent-icon" uk-nav>
-                <li class="uk-active"><a href="#"><span uk-icon="icon: home"></span> Inicio</a></li>
-                <li><a href="#"><span uk-icon="icon: list"></span> Proyectos</a></li>
+                <li class="uk-active">
+                    <a href="{{ route('dashboard') }}"><span uk-icon="icon: home">
+                        </span> Inicio
+                    </a>
+                </li>
+                <li><a href="{{ route('projects.index') }}">
+                        <span uk-icon="icon: list"></span> Proyectos
+                    </a>
+                </li>
                 <li><a href="#"><span uk-icon="icon: users"></span> Clientes</a></li>
                 <li><a href="#"><span uk-icon="icon: file-text"></span> Cotizaciones</a></li>
                 <li class="uk-nav-divider"></li>
@@ -127,16 +134,22 @@
                 <div class="uk-flex uk-flex-right uk-flex-middle">   
                     <div>
                         <span class="uk-margin-small-right">Bienvenido, <strong>Admin</strong></span>
-                        <a href="#" class="uk-icon-link" uk-icon="icon: sign-out; ratio: 1.2" title="Cerrar sesión"></a>
+                        <a href="{{ route('logout') }}" class="uk-icon-link" uk-icon="icon: sign-out; ratio: 1.2" title="Cerrar sesión"></a>
                     </div>
                 </div>
             </div>
         </header>
         <div class="uk-container">
-            <div class="uk-card uk-card-secondary uk-card-body">
+            <div class="uk-card uk-card-secondary uk-card-body"
+            style="display: {{ Route::currentRouteName() != 'dashboard' ? 'none' : 'block' }}">
+                <h2>Bienvenido!</h2>  
+            </div>    
+            <div class="uk-card uk-card-secondary uk-card-body"
+            style="display: {{ Route::currentRouteName() === 'dashboard' ? 'none' : 'block' }}">
                 @yield('content')
             </div>
-        </div>
+        </div>     
+        
     </main>
 
     <!-- Pie de página -->

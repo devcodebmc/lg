@@ -12,18 +12,13 @@
                     <li uk-filter-control class="uk-active">
                         <a href="#" class="uk-link-text uk-text-decoration-none">TODOS</a>
                     </li>
-                    <li uk-filter-control="[data-category='plafon']">
-                        <a href="#" class="uk-link-text uk-text-decoration-none">PLAFÓN</a>
-                    </li>
-                    <li uk-filter-control="[data-category='deck']">
-                        <a href="#" class="uk-link-text uk-text-decoration-none">DECK</a>
-                    </li>
-                    <li uk-filter-control="[data-category='celosia']">
-                        <a href="#" class="uk-link-text uk-text-decoration-none">CELOSÍA</a>
-                    </li>
-                    <li uk-filter-control="[data-category='fachada']">
-                        <a href="#" class="uk-link-text uk-text-decoration-none">FACHADA</a>
-                    </li>
+                    @foreach ($project->proceedings as $step)
+                        <li uk-filter-control="[data-category='{{ strtolower($step) }}']">
+                            <a href="#" class="uk-link-text uk-text-decoration-none">
+                                {{ strtoupper($step) }}
+                            </a>
+                        </li>
+                    @endforeach
                 </ul>
             </div>
 
