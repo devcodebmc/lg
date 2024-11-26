@@ -22,7 +22,7 @@
                 @forelse($secondaryImages as $secondaryImage)
                     <tr>
                         <td>{{ $loop->iteration }}</td>
-                        <td>{{ $secondaryImage->project_id }}</td>
+                        <td>{{ $project->title }}</td>
                         <td>
                             <img src="{{ asset('storage/'. $secondaryImage->image_path) }}" 
                                 alt="{{ 'Imagen-'.$loop->iteration }}" width="75" height="75">

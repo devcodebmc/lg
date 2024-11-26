@@ -13,12 +13,12 @@ class SecondaryImageController extends Controller
         $secondaryImages = SecondaryImage::where('project_id', $project)->get();
 
         // Obtener un solo proyecto
-        $project = Project::select('proceedings')->where('id', $project)->first();
+        $project = Project::select('title','proceedings')->where('id', $project)->first();
 
         // Decodificar 'proceedings' si no está vacío
         $proceedings = $project ? $project->proceedings : [];
 
-        return view('backend.secondary_images.index', compact('secondaryImages', 'proceedings'));
+        return view('backend.secondary_images.index', compact('secondaryImages', 'project', 'proceedings'));
     }
 
     public function update(Request $request, $id){
