@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\SecondaryImage;
 use App\Models\Project;
+use Illuminate\Support\Facades\Storage;
 
 class SecondaryImageController extends Controller
 {
@@ -41,6 +42,20 @@ class SecondaryImageController extends Controller
         } catch (\Exception $e) {
             return redirect()->back()->with('error', 'Error al actualizar los procesos: ' . $e->getMessage());
         }
+    }
+
+    public function destroy($project){
+        // Eliminar la imagen secundaria asociada al proyecto
+       $secondaryImage = SecondaryImage::findOrFail($project);
+       // Eliminar la  imagen de la carpeta public 
+    //    dd($secondaryImage);
+       if (Storage::disk('public')->exists($secondaryImage->image_path)) {
+            Storage::disk('public')->delete($secondaryImage->image_path);
+        }
+        // Eliminar la imagen secundaria en la base de datos
+        $secondaryImage->delete();
+
+        return redirect()->back()->with('success', 'Imagen secundaria eliminada correctamente.');
     }
 
 }

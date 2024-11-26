@@ -2,18 +2,44 @@
 
 @section('content')
 
+<style>
+    .lg-sec-image {
+        margin-top: 10px; 
+        display: flex; 
+        flex-wrap: wrap; 
+        gap: 10px;
+    }
+    .lg-container-center {
+        position: relative; 
+        display: inline-block; 
+        max-width: 150px;
+    }
+    .lg-icon-trash {
+        color: #f15757 !important; 
+        position: absolute; 
+        top: 50%; 
+        left: 50%; 
+        transform: translate(-50%, -50%); 
+        background-color: rgba(255, 255, 255, 0.7); 
+        border-radius: 50%; 
+        padding: 5px;
+    }
+</style>
+
 <div class="uk-container">
 
     <h2 class="uk-heading-line uk-text-center"><span>Editar Proyecto</span></h2>
 
     @if(session('success'))
         <div class="uk-alert-success" uk-alert>
+            <a class="uk-alert-close" uk-close></a>
             {{ session('success') }}
         </div>
     @endif
 
     @if ($errors->any())
         <div class="uk-alert-danger" uk-alert>
+            <a class="uk-alert-close" uk-close></a>
             <ul>
                 @foreach ($errors->all() as $error)
                     <li>{{ $error }}</li>
@@ -102,12 +128,23 @@
                     <input type="file" id="secondary_images" name="secondary_images[]" multiple onchange="previewSecondaryImages(event)">
                     <input class="uk-input uk-form-width-large" type="text" placeholder="Seleccionar archivos" disabled>
                 </div>
-                <div id="secondary_images_preview" style="margin-top: 10px;">
+                <div id="secondary_images_preview" class="lg-sec-image">
                     @foreach ($project->secondaryImages as $image)
-                        <img src="{{ asset('storage/' . $image->image_path) }}" style="max-width: 150px; margin-right: 10px; margin-top: 10px;">
+                        <div class="lg-container-center">
+                            <!-- Imagen -->
+                            <img src="{{ asset('storage/' . $image->image_path) }}" 
+                                 style="width: 100%; display: block;">
+                            <!-- Ícono centrado -->
+                            <a 
+                                href="{{ route('secondary-images.destroy', ['project' => $image->id]) }}" 
+                               uk-icon="icon: trash" 
+                               class="lg-icon-trash">
+                            </a>
+                        </div>
                     @endforeach
                     <div id="secondary_images_list"></div>
                 </div>
+                
             </div>
 
         </div>
