@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Project;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Storage;
 
 class ProjectController extends Controller
 {
@@ -98,36 +99,40 @@ class ProjectController extends Controller
         $project = Project::findOrFail($id);
 
         // Actualizar los campos básicos
-        $project->title         = $validatedData['title'];
-        $project->location      = $validatedData['location'];
-        $project->manager       = $validatedData['manager'];
-        $project->type          = $validatedData['type'];
+        $project->title = $validatedData['title'];
+        $project->location = $validatedData['location'];
+        $project->manager = $validatedData['manager'];
+        $project->type = $validatedData['type'];
         $project->delivery_date = $validatedData['delivery_date'];
-        $project->cover_video   = $validatedData['cover_video'];
-        $project->description   = $validatedData['description'];
-        $project->finishes      = $validatedData['finishes'];
-        $project->proceedings   = $validatedData['proceedings'];
+        $project->cover_video = $validatedData['cover_video'];
+        $project->description = $validatedData['description'];
+        $project->finishes = $validatedData['finishes'];
+        $project->proceedings = $validatedData['proceedings'];
 
         // Manejar la imagen principal
         if ($request->hasFile('cover_image')) {
+            // Eliminar la imagen existente si la hay
+            if ($project->cover_image && Storage::disk('public')->exists($project->cover_image)) {
+                Storage::disk('public')->delete($project->cover_image);
+            }
+
+            // Guardar la nueva imagen
             $coverImagePath = $request->file('cover_image')->store('projects/mainImages', 'public');
             $project->cover_image = $coverImagePath;
         }
-
 
         // Manejar imágenes secundarias
         if ($request->hasFile('secondary_images')) {
             foreach ($request->file('secondary_images') as $image) {
                 $path = $image->store('projects/secondaryImages', 'public');
-                
+
                 // Crear registros en la tabla secundaria
                 $project->secondaryImages()->create([
                     'image_path' => $path,
-                    'category' => $validatedData['proceedings'], 
+                    'category' => $validatedData['proceedings'],
                 ]);
             }
         }
-    
 
         // Guardar cambios en la base de datos
         $project->save();
@@ -136,6 +141,7 @@ class ProjectController extends Controller
         return redirect()->route('projects.index', $project->id)
             ->with('success', 'Proyecto actualizado exitosamente.');
     }
+
 
     // Eliminar un proyecto
     public function destroy(Project $project){
