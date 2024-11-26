@@ -37,10 +37,13 @@ class ProjectController extends Controller
         ]);
 
         $validated['slug'] = Str::slug($validated['title']);
+
+        $projectSlug = $validated['slug'];
         
          // Procesar imagen de portada
         if ($request->hasFile('cover_image')) {
-            $validated['cover_image'] = $request->file('cover_image')->store('projects/mainImages', 'public');
+            $validated['cover_image'] = $request->file('cover_image')
+            ->store('projects/mainImages/'.$projectSlug, 'public');
         }
 
         // Crear el proyecto
@@ -49,7 +52,7 @@ class ProjectController extends Controller
          // Manejar imágenes secundarias
         if ($request->hasFile('secondary_images')) {
             foreach ($request->file('secondary_images') as $image) {
-                $path = $image->store('projects/secondaryImages', 'public');
+                $path = $image->store('projects/secondaryImages/'.$projectSlug, 'public');
                 
                 // Crear registros en la tabla secundaria
                 $project->secondaryImages()->create([
@@ -109,6 +112,7 @@ class ProjectController extends Controller
         $project->finishes = $validatedData['finishes'];
         $project->proceedings = $validatedData['proceedings'];
 
+        $projectSlug = $project->slug;
         // Manejar la imagen principal
         if ($request->hasFile('cover_image')) {
             // Eliminar la imagen existente si la hay
@@ -117,14 +121,15 @@ class ProjectController extends Controller
             }
 
             // Guardar la nueva imagen
-            $coverImagePath = $request->file('cover_image')->store('projects/mainImages', 'public');
+            $coverImagePath = $request->file('cover_image')
+            ->store('projects/mainImages/'.$projectSlug, 'public');
             $project->cover_image = $coverImagePath;
         }
 
         // Manejar imágenes secundarias
         if ($request->hasFile('secondary_images')) {
             foreach ($request->file('secondary_images') as $image) {
-                $path = $image->store('projects/secondaryImages', 'public');
+                $path = $image->store('projects/secondaryImages/'.$projectSlug, 'public');
 
                 // Crear registros en la tabla secundaria
                 $project->secondaryImages()->create([
