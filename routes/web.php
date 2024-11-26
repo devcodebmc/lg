@@ -46,8 +46,7 @@ Route::middleware('auth')->group(function () {
         Route::put('/projects/update/{project}', [ProjectController::class, 'update'])->name('projects.update');
         // Más rutas protegidas
         Route::get('/secondary-images/{project}', [SecondaryImageController::class, 'index'])->name('secondary-images.index');
-        Route::post('/secondary-images/store/{project}', [SecondaryImageController::class,'store'])->name('secondary-images.store');
-        Route::delete('/secondary-images/delete/{project}/{image}', [SecondaryImageController::class, 'destroy'])->name('secondary-images.destroy');
+        Route::put('/secondary-images/{project}/updateProceedings', [SecondaryImageController::class, 'update'])->name('secondary-images.updateProceedings');
     });
 });
 

@@ -46,11 +46,23 @@
                         <td>{{ $project->delivery_date }}</td>
 
                         <td>
-                            <a href="{{ route('projects.edit', ['project' => $project->id]) }}" uk-icon="icon: pencil" title="Editar"></a>
+                            <a href="{{ route('projects.edit', ['project' => $project->id]) }}" 
+                                uk-icon="icon: pencil" 
+                                title="Editar"
+                                style="padding:5px; color: #3fb2f4;">
+                            </a>
+                            <a href="{{ route('secondary-images.index', ['project' => $project->id]) }}" 
+                                uk-icon="icon: image" 
+                                title="Editar"
+                                style="padding:5px; color: #54f43f;">
+                            </a>
                             <form action="#" method="POST" style="display:inline-block;">
                                 @csrf
                                 @method('DELETE')
-                                <button type="submit" title="Eliminar" uk-icon="icon: trash" onclick="return confirm('¿Estás seguro de que deseas eliminar este proyecto?')"></button>
+                                <button type="submit" title="Eliminar" uk-icon="icon: trash" 
+                                        onclick="return confirm('¿Estás seguro de que deseas eliminar este proyecto?')"
+                                        style="padding:5px; color:#f44b3fd0;">
+                                </button>
                             </form>
                         </td>
                     </tr>

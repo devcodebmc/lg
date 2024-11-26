@@ -20,4 +20,27 @@ class SecondaryImageController extends Controller
 
         return view('backend.secondary_images.index', compact('secondaryImages', 'proceedings'));
     }
+
+    public function update(Request $request, $id){
+        // Validar que los proceedings sean un arreglo o nulos
+        $validatedData = $request->validate([
+            'proceedings' => 'nullable|array',
+        ]);
+
+        try {
+            // Buscar la imagen secundaria
+            $secondaryImage = SecondaryImage::findOrFail($id);
+
+            // Actualizar el campo proceedings (se guarda como JSON)
+            $secondaryImage->category = $validatedData['proceedings'] ?? [];
+
+            // Guardar los cambios
+            $secondaryImage->save();
+
+            return redirect()->back()->with('success', 'Procesos de instalación actualizados correctamente.');
+        } catch (\Exception $e) {
+            return redirect()->back()->with('error', 'Error al actualizar los procesos: ' . $e->getMessage());
+        }
+    }
+
 }

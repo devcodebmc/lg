@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="d-flex justify-content-between align-items-center mb-4">
-        <h1>Imagenes Secundarias</h1>
+        <h2>Editar Detalles de Imágenes Secundarias</h2>
     </div>
     <br>
 
@@ -12,9 +12,9 @@
             <thead>
                 <tr class="uk-text-left">
                     <th>#</th>
-                    <th>Proyecto_Id</th>
-                    <th>Imagen</th>
-                    <th>Category</th>
+                    <th>Proyecto</th>
+                    <th>Imagen Secundaria</th>
+                    <th>Procesos De Instalación</th>
                     <th>Acciones</th>
                 </tr>
             </thead>
@@ -25,26 +25,39 @@
                         <td>{{ $secondaryImage->project_id }}</td>
                         <td>
                             <img src="{{ asset('storage/'. $secondaryImage->image_path) }}" 
-                                alt="{{ 'Imagen-'.$loop->iteration }}" width="75" height="275">
+                                alt="{{ 'Imagen-'.$loop->iteration }}" width="75" height="75">
                         </td>
-                        <td>
-                            <select class="uk-select uk-margin-top" id="proceedings" name="proceedings[]" multiple>
-                                @foreach ($proceedings as $pro)
-                                    <option value="{{ $pro }}" selected>
-                                        {{ $pro }}
-                                    </option>
-                                @endforeach
-                            </select>
-                            
-                            
-                        </td>
-                        <td>
-                            <a href="#" uk-icon="icon: pencil" title="Editar"></a>
-                        </td>
+                        <form action="{{ route('secondary-images.updateProceedings', $secondaryImage->id) }}" method="POST">
+                            @csrf
+                            @method('PUT')
+                            <td>
+                                <div>
+                                    @foreach ($proceedings as $pro)
+                                        <label class="uk-margin-small-right">
+                                            <input type="checkbox" 
+                                                name="proceedings[]" 
+                                                value="{{ $pro }}" 
+                                                class="uk-checkbox"
+                                                @if(in_array($pro, $secondaryImage->category ?? [])) checked @endif>
+                                            {{ $pro }}
+                                        </label>
+                                        <br>
+                                    @endforeach
+                                </div>  
+                            </td>
+                            <td>
+                                {{-- Opciones adicionales aquí si es necesario --}}
+                                <button type="submit" 
+                                        class="uk-button uk-button-link uk-margin-small-right"
+                                        style="border: solid 1.5px #28b463; padding: 5px;">
+                                    Guardar
+                                </button>
+                            </td>
+                        </form>
                     </tr>
                 @empty
                     <tr>
-                        <td colspan="7" class="text-center">No hay proyectos registrados.</td>
+                        <td colspan="7" class="text-center">No hay imágenes secundarias.</td>
                     </tr>
                 @endforelse
             </tbody>
@@ -52,3 +65,5 @@
     </div>
 </div>
 @endsection
+
+
