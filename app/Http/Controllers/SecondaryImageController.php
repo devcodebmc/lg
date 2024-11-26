@@ -48,7 +48,6 @@ class SecondaryImageController extends Controller
         // Eliminar la imagen secundaria asociada al proyecto
        $secondaryImage = SecondaryImage::findOrFail($project);
        // Eliminar la  imagen de la carpeta public 
-    //    dd($secondaryImage);
        if (Storage::disk('public')->exists($secondaryImage->image_path)) {
             Storage::disk('public')->delete($secondaryImage->image_path);
         }
