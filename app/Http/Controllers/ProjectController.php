@@ -39,7 +39,7 @@ class ProjectController extends Controller
         
          // Procesar imagen de portada
         if ($request->hasFile('cover_image')) {
-            $validated['cover_image'] = $request->file('cover_image')->store('projects/images', 'public');
+            $validated['cover_image'] = $request->file('cover_image')->store('projects/mainImages', 'public');
         }
 
         // Crear el proyecto
@@ -48,7 +48,7 @@ class ProjectController extends Controller
          // Manejar imágenes secundarias
         if ($request->hasFile('secondary_images')) {
             foreach ($request->file('secondary_images') as $image) {
-                $path = $image->store('projects/images', 'public');
+                $path = $image->store('projects/secondaryImages', 'public');
                 
                 // Crear registros en la tabla secundaria
                 $project->secondaryImages()->create([
@@ -110,7 +110,7 @@ class ProjectController extends Controller
 
         // Manejar la imagen principal
         if ($request->hasFile('cover_image')) {
-            $coverImagePath = $request->file('cover_image')->store('projects', 'public');
+            $coverImagePath = $request->file('cover_image')->store('projects/mainImages', 'public');
             $project->cover_image = $coverImagePath;
         }
 
@@ -118,7 +118,7 @@ class ProjectController extends Controller
         // Manejar imágenes secundarias
         if ($request->hasFile('secondary_images')) {
             foreach ($request->file('secondary_images') as $image) {
-                $path = $image->store('projects/images', 'public');
+                $path = $image->store('projects/secondaryImages', 'public');
                 
                 // Crear registros en la tabla secundaria
                 $project->secondaryImages()->create([
