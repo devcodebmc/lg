@@ -147,10 +147,33 @@ class ProjectController extends Controller
             ->with('success', 'Proyecto actualizado exitosamente.');
     }
 
-
-    // Eliminar un proyecto
-    public function destroy(Project $project){
-        $project->delete();
-        return redirect()->route('projects.index')->with('success', 'Proyecto eliminado exitosamente.');
+    public function destroy($project){
+        // Buscar el proyecto por su ID
+        $project = Project::findOrFail($project);
+    
+        // Eliminar la imagen principal si existe
+        if ($project->cover_image && Storage::disk('public')->exists($project->cover_image)) {
+            Storage::disk('public')->delete($project->cover_image);
+        }
+    
+        // Eliminar las imágenes secundarias relacionadas si existen
+        if ($project->secondaryImages) {
+            foreach ($project->secondaryImages as $image) {
+                if (Storage::disk('public')->exists($image->image_path)) {
+                    Storage::disk('public')->delete($image->image_path);
+                }
+            }
+    
+            // Eliminar los registros de la tabla de imágenes secundarias
+            $project->secondaryImages()->forceDelete();
+        }
+    
+        // Eliminar el proyecto
+        $project->forceDelete();
+    
+        // Redirigir con un mensaje de éxito
+        return redirect()->route('projects.index')
+            ->with('success', 'Proyecto eliminado exitosamente.');
     }
+    
 }

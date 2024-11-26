@@ -56,7 +56,7 @@
                                 title="Editar"
                                 style="padding:5px; color: #54f43f;">
                             </a>
-                            <form action="#" method="POST" style="display:inline-block;">
+                            <form action="{{ route('projects.destroy', ['project' => $project->id]) }}" method="POST" style="display:inline-block;">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" title="Eliminar" uk-icon="icon: trash" 
