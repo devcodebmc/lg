@@ -182,6 +182,7 @@
             const option = document.createElement('option');
             option.value = newOption;
             option.textContent = newOption;
+            option.selected = true;
             select.appendChild(option);
             input.value = '';
         } else {
