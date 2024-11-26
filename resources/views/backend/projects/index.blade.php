@@ -3,6 +3,7 @@
 @section('content')
 <div class="container">
     <div class="d-flex justify-content-between align-items-center mb-4">
+        @include('backend.components.backlink')
         <h1>Proyectos</h1>
         <a href="{{ route('projects.create') }}" class="uk-button uk-button-link"
             style="color: #f4d03f; font-weight: bold; border: solid 1px; padding: 10px;">

@@ -3,6 +3,7 @@
 @section('content')
 <div class="container">
     <div class="d-flex justify-content-between align-items-center mb-4">
+        @include('backend.components.backlink')
         <h2>Editar Detalles de Imágenes Secundarias</h2>
     </div>
     <br>
