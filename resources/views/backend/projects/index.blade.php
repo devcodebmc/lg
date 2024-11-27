@@ -54,7 +54,7 @@
                             </a>
                             <a href="{{ route('secondary-images.index', ['project' => $project->id]) }}" 
                                 uk-icon="icon: image" 
-                                title="Editar"
+                                title="Editar Imagenes"
                                 style="padding:5px; color: #54f43f;">
                             </a>
                             <form action="{{ route('projects.destroy', ['project' => $project->id]) }}" method="POST" style="display:inline-block;">
