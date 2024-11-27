@@ -119,7 +119,11 @@
                         <span uk-icon="icon: list"></span> Proyectos
                     </a>
                 </li>
-                <li><a href="#"><span uk-icon="icon: users"></span> Clientes</a></li>
+                <li>
+                    <a href="{{ route('email-received.index') }}">
+                        <span uk-icon="icon: mail"></span> Correos Recibidos
+                    </a>
+                </li>
                 <li><a href="#"><span uk-icon="icon: file-text"></span> Cotizaciones</a></li>
                 <li class="uk-nav-divider"></li>
                 <li><a href="#"><span uk-icon="icon: settings"></span> Configuración</a></li>

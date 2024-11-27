@@ -49,6 +49,8 @@ Route::middleware('auth')->group(function () {
         Route::get('/secondary-images/{project}', [SecondaryImageController::class, 'index'])->name('secondary-images.index');
         Route::put('/secondary-images/{project}/updateProceedings', [SecondaryImageController::class, 'update'])->name('secondary-images.updateProceedings');
         Route::get('/secondary-images/destroy/{project}', [SecondaryImageController::class, 'destroy'])->name('secondary-images.destroy');
+        // Más rutas protegidas
+        Route::get('/emails-received', [ContactController::class, 'index'])->name('email-received.index');
     });
 });
 
