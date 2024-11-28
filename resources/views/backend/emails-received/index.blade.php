@@ -2,11 +2,11 @@
 
 @section('content')
 <div class="container">
-    <div class="d-flex justify-content-between align-items-center mb-4">
+    <div class="uk-flex uk-flex-between uk-margin-bottom">
         @include('backend.components.backlink')
-        <h2>Correos de Contacto Recibidos</h2>
+        <h2 class="uk-heading-line"><span>Correos Recibidos</span></h2>
     </div>
-    <br>
+
 
     @if($emails->isEmpty())
         <div class="uk-alert-primary uk-text-center" uk-alert>

@@ -124,7 +124,11 @@
                         <span uk-icon="icon: mail"></span> Correos Recibidos
                     </a>
                 </li>
-                <li><a href="#"><span uk-icon="icon: file-text"></span> Cotizaciones</a></li>
+                <li>
+                    <a href="{{ route('budget-received.index') }}">
+                        <span uk-icon="icon: file-text"></span> Cotizaciones Recibidas
+                    </a>
+                </li>
                 <li class="uk-nav-divider"></li>
                 <li><a href="#"><span uk-icon="icon: settings"></span> Configuración</a></li>
             </ul>

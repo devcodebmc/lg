@@ -9,6 +9,11 @@ use App\Models\Budget;
 
 class BudgetController extends Controller
 {
+    
+    public function index(){
+        $budgets = Budget::latest()->get(); // Ordena por fecha de creación más reciente
+        return view('backend.budgets.index', compact('budgets'));
+    }
     public function send(Request $request)
     {
         // Validar los datos del formulario
