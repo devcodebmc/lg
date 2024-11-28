@@ -26,7 +26,7 @@ class ContactController extends Controller
 
         try {
             // Enviar el correo
-            // Mail::to('manzanocortesbrayan@gmail.com')->send(new ContactFormMail($data));
+            Mail::to('manzanocortesbrayan@gmail.com')->send(new ContactFormMail($data));
 
             // Enviar a la base de datos
             $contact = new Contact();
