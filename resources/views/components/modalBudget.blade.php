@@ -13,6 +13,7 @@
                 
                 <form action="{{ route('budget.send') }}" method="POST" class="uk-form-stacked">
                     @csrf
+                    @method('POST')
                     <!-- Nombre Completo -->
                     <div class="uk-margin">
                         <label class="uk-form-label" for="nombre">Nombre Completo</label>

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\BudgetMail;
+use App\Models\Budget;
 
 class BudgetController extends Controller
 {
@@ -25,6 +26,20 @@ class BudgetController extends Controller
         try {
             // Enviar el correo
             Mail::to('manzanocortesbrayan@gmail.com')->send(new BudgetMail($data));
+
+            // Crear un nuevo presupuesto en la base de datos
+            $budget = new Budget();
+            $budget->name = $data['nombre'];
+            $budget->email = $data['correo'];
+            $budget->phone = $data['telefono'];
+            $budget->service_type = $data['servicio'];
+            $budget->area = $data['area'];
+            $budget->material_description = $data['materiales'];
+            $budget->budget = $data['presupuesto'];
+            $budget->additional_notes = $data['mensaje'];
+            $budget->save();
+
+            // dd($budget);
 
             // Redirigir con un mensaje satisfactorio
             return redirect()->back()->with('success-cot', '¡Tu cotización ha sido enviada correctamente!');
