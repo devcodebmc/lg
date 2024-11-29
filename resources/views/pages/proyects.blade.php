@@ -12,7 +12,7 @@
                 <strong>Ubicación:</strong> {{ $project->location }}
             </li>
             <li><span uk-icon="user" class="uk-text-base-brown"></span>
-                <strong>Arquitecto:</strong> {{ $project->manager }}
+                <strong>Encargado:</strong> {{ $project->manager }}
             </li>
             <li><span uk-icon="home" class="uk-text-base-brown"></span>
                 <strong>Tipo de Proyecto:</strong> {{ $project->type }}
