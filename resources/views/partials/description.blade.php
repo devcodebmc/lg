@@ -1,4 +1,4 @@
-<div class="uk-section uk-section-default uk-padding lg-description" id="sobre-nosotros">
+<div class="uk-section uk-section-default uk-padding lg-description uk-margin-remove-top" id="sobre-nosotros">
     <div class="uk-container uk-flex" uk-grid>
         <!-- Imágenes -->
         <div class="uk-width-1-2@m uk-position-relative uk-custom-images">
@@ -12,7 +12,11 @@
                 Trabajo De Calidad Que <br> Cumplen Tus Expectativas
             </h2>
             <p style="font-size: 1rem;">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sit amet lorem feugiat, varius ligula vel, malesuada ipsum. Vivamus eu dui ac lacus placerat porta id eu magna. Curabitur consequat nibh vitae egestas ultrices. Nunc aliquet nibh magna, non imperdiet metus ultricies sit amet.
+                En <strong>Construcción y Remodelación LG</strong>, somos un equipo de apasionados profesionales dedicados a transformar espacios, creando ambientes únicos y funcionales. Con más de una década de experiencia en el sector, nos enorgullecemos de ofrecer soluciones integrales de construcción y remodelación que combinan calidad, innovación y atención al detalle.
+            </p>
+            <h2 class="uk-heading-small uk-text-bold lg-desc">Nuestra Misión</h2>
+            <p>
+                Nuestra misión es convertir tus sueños en realidad, brindando servicios de alta calidad que superen tus expectativas. Creemos en el poder del diseño y la construcción para mejorar la calidad de vida, y nos esforzamos por entregar proyectos que reflejen tu personalidad y estilo.
             </p>
             
             <ul class="uk-list uk-list-large uk-list-divider uk-padding-remove-left lg-list">
