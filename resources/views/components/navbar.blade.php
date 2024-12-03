@@ -53,14 +53,6 @@
     <div class="uk-offcanvas-bar uk-background-secondary uk-light">
         <!-- Close button -->
         <button class="uk-offcanvas-close" type="button" uk-close></button>
-        
-        <!-- Logo -->
-        <a href="{{ route('welcome') }}" class="uk-logo uk-text-bold uk-margin-small-bottom">
-            <img src="{{ asset('images/lg-logo-rm-bg.png') }}" 
-            alt="Logo Construcción y Remodelación LG"
-            width="50"
-            height="50">
-        </a>
 
         <!-- Mobile Navigation Links -->
         <ul class="uk-nav uk-nav-default uk-margin-medium-top">
@@ -73,5 +65,14 @@
 
         <!-- Mobile Presupuesto Button -->
         <a href="#presupuesto" uk-toggle class="uk-button uk-border-pill uk-text-bold uk-margin-top" style="color: #444; background: #FFFFFF; display: block;">PRESUPUESTO</a>
+
+         <!-- Logo -->
+        <a href="{{ route('welcome') }}" class="">
+            <img src="{{ asset('images/lg-logo-rm-bg.png') }}" 
+                class="uk-border-rounded uk-align-center uk-margin-large-top" 
+                alt="Logo Construcción y Remodelación Lg"
+                width="120"
+                height="120">
+        </a>
     </div>
 </div>
