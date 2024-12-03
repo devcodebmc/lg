@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Construcción y Remodelación LG @yield('title')</title>
+    <link rel="shortcut icon" href="{{ asset('images/lg-logo-rm-bg.png') }}" type="image/x-icon">
      {{-- Uikit Styles --}}
     <link rel="stylesheet" href="{{ asset('css/uikit.css') }}">
     <link rel="stylesheet" href="{{ asset('css/index.css') }}">

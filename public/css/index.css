@@ -543,6 +543,12 @@ h1, h2, h3, h4, h5, h6 {
     transition: all 0.3s ease-in-out;
 }
 
+/* Logo styles */
+.lg-logo-footer {
+    width: 180px;
+    height: auto;
+}
+
 
 
 /* Ajuste en pantallas pequeñas */
@@ -619,5 +625,8 @@ h1, h2, h3, h4, h5, h6 {
 
     .modal-img {
         height: 50vh !important;
+    }
+    .lg-logo-footer {
+        width: 120px;
     }
 }

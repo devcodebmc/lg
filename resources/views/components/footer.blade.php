@@ -3,9 +3,13 @@
 @endphp
 <footer class="uk-section uk-section-secondary uk-light uk-margin-large-top">
     <div class="uk-container uk-container-expand">
-        <div class="uk-grid-divider uk-child-width-1-3@s uk-text-center" uk-grid>
+        <div class="uk-grid-divider uk-text-center uk-child-width-1-3@s" 
+            uk-grid
+            style="align-items: center;">
             <div>
-                <h3 class="uk-heading-small">LOGO</h3>
+                <img src="{{ asset('images/lg-logo-x-border.png') }}" 
+                    class="uk-border-circle lg-logo-footer " 
+                    alt="Logo Construcción y Remodelación Lg">
             </div>
             <div class="uk-flex uk-flex-column uk-flex-middle">
                 <div class="uk-flex uk-flex-middle lg-tel">
@@ -26,6 +30,7 @@
         </div>
         
         <div class="uk-text-center uk-margin-top">
+           
             <ul class="uk-subnav uk-subnav-divider uk-flex-center">
                 <li>
                     <a href="{{ route('welcome') }}">INICIO</a>

@@ -7,7 +7,12 @@
         <!-- Centered Navbar Content -->
         <div class="uk-navbar-center">
             <!-- Logo -->
-            <a href="{{ route('welcome') }}" class="uk-navbar-item uk-logo" style="color: #FFFFFF">LOGO</a>
+            <a href="{{ route('welcome') }}" class="uk-navbar-item uk-logo">
+                <img src="{{ asset('images/lg-logo-rm-bg.png') }}" 
+                    alt="Logo Construcción y Remodelación LG"
+                    width="50"
+                    height="50">
+            </a>
 
             <!-- Navigation Links (visible only on desktop) -->
             <ul class="uk-navbar-nav uk-visible@m">
@@ -50,7 +55,12 @@
         <button class="uk-offcanvas-close" type="button" uk-close></button>
         
         <!-- Logo -->
-        <a href="/" class="uk-logo uk-text-bold uk-margin-small-bottom" style="color: #FFFFFF;">LOGO</a>
+        <a href="{{ route('welcome') }}" class="uk-logo uk-text-bold uk-margin-small-bottom">
+            <img src="{{ asset('images/lg-logo-rm-bg.png') }}" 
+            alt="Logo Construcción y Remodelación LG"
+            width="50"
+            height="50">
+        </a>
 
         <!-- Mobile Navigation Links -->
         <ul class="uk-nav uk-nav-default uk-margin-medium-top">

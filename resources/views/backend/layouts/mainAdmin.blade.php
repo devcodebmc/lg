@@ -8,6 +8,7 @@
     {{-- UIkit Styles --}}
     <link rel="stylesheet" href="{{ asset('css/uikit.css') }}">
     <link rel="stylesheet" href="{{ asset('css/index.css') }}">
+    <link rel="shortcut icon" href="{{ asset('images/lg-logo-rm-bg.png') }}" type="image/x-icon">
     <style>
         /* Estilo para el menú hamburguesa */
         .hamburger-menu {
