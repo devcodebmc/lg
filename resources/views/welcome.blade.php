@@ -4,6 +4,7 @@
 
 @include('components.slider')
 @include('partials.description')
+@include('partials.advantages')
 @include('partials.banner')
 @include('partials.services')
 @include('partials.banner2')

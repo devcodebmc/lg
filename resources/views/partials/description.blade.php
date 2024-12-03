@@ -17,7 +17,7 @@
         <!-- Texto y lista de características -->
         <div class="uk-width-1-2@m">
             <h2 class="uk-heading-small uk-text-bold ">
-                Trabajo De Calidad Que <br> Cumplen Tus Expectativas
+                Trabajo De Calidad Con Tus Expectativas
             </h2>
             <p style="font-size: 1rem;">
                 En <strong>Construcción y Remodelación LG</strong>, somos un equipo de apasionados profesionales dedicados a transformar espacios, creando ambientes únicos y funcionales. Con más de una década de experiencia en el sector, nos enorgullecemos de ofrecer soluciones integrales de construcción y remodelación que combinan calidad, innovación y atención al detalle.
