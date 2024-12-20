@@ -57,9 +57,15 @@
              <!-- Redes Sociales -->
             <div class="uk-text-center uk-margin-top uk-margin-medium-bottom">
                 <ul class="uk-subnav uk-flex-center uk-margin-remove">
-                    <li><a href="#" target="_blank" uk-icon="icon: facebook" class="social-icon"></a></li>
-                    <li><a href="#" target="_blank" uk-icon="icon: instagram" class="social-icon"></a></li>
-                    <li><a href="#" target="_blank" uk-icon="icon: whatsapp" class="social-icon"></a></li>
+                    <li>
+                        <a href="https://www.facebook.com/construccionyremodelacionlg" target="_blank" uk-icon="icon: facebook" class="social-icon"></a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/construccion_remodelacionlg/" target="_blank" uk-icon="icon: instagram" class="social-icon"></a>
+                    </li>
+                    <li>
+                        <a href="https://api.whatsapp.com/send?phone=525515659700&amp;text=Hola, los contacto de la página: construccionyremodelacionlg.com, solicito la atención de un asesor, por favor." target="_blank" uk-icon="icon: whatsapp" class="social-icon"></a>
+                    </li>
                 </ul>
             </div>
             <p class="lg-copy">
