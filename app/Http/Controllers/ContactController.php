@@ -11,7 +11,7 @@ class ContactController extends Controller
 {
 
     public function index(){
-        $emails = Contact::All();
+        $emails = Contact::latest()->get();
         return view('backend.emails-received.index', compact('emails'));
     }
 
