@@ -69,7 +69,7 @@
                 </ul>
             </div>
             <p class="lg-copy">
-                © 2024. Hecho con 💚
+                © 2025. Hecho con 💚
                 <a class="uk-link-reset" href="https://www.bydsolutions.com" target="_blank" rel="noopener noreferrer" style="color: #7381df !important">
                     ByD Solutions
                 </a> 
