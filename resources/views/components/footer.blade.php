@@ -53,7 +53,7 @@
         <hr>
 
         <div class="uk-text-center uk-margin-top uk-margin-small-bottom">
-            <small class="uk-h6">© Construcción y Remodelación LG. 2024</small>
+            <small class="uk-h6">© Construcción y Remodelación LG. 2025</small>
              <!-- Redes Sociales -->
             <div class="uk-text-center uk-margin-top uk-margin-medium-bottom">
                 <ul class="uk-subnav uk-flex-center uk-margin-remove">
