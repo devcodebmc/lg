@@ -1,6 +1,9 @@
 @extends('layouts.main')
 
 @section('title', "| {$project->title}")
+
+@include('animations.buildloader')
+
 @section('content')
 
 <div class="uk-grid-divider uk-grid-small uk-child-width-1-3@m uk-grid uk-padding" uk-grid>

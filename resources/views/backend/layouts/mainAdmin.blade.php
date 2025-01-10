@@ -163,7 +163,7 @@
 
     <!-- Pie de página -->
     <footer class="uk-background-secondary uk-padding-small uk-text-center">
-        <p class="uk-text-small">© 2024 Construcción y Remodelación LG. Todos los derechos reservados.</p>
+        <p class="uk-text-small">© 2025 Construcción y Remodelación LG. Todos los derechos reservados.</p>
     </footer>
 
     {{-- UIkit Scripts --}}
