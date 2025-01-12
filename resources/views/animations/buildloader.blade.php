@@ -152,6 +152,6 @@
       setTimeout(() => {
         preloader.style.display = "none";
       }, 500); // Ensure it is hidden after fade-out
-    }, 1300); // Delay of 1 second after page load
+    }, 1000); // Delay of 1 second after page load
   });
 </script>

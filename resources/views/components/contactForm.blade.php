@@ -43,29 +43,29 @@
             </div>
         </div>
         <div>
-            <div class="uk-card uk-card-default uk-card-body uk-border-rounded uk-margin-remove-top uk-margin-remove-bottom uk-padding-remove-bottom uk-padding-remove-top">
+            <div class="uk-card uk-card-default uk-card-body uk-border-rounded uk-margin-remove-top uk-margin-remove-bottom">
                 <em class="uk-text-justify" style="color: #c8b48f;">
                     Si deseas contactarnos para solicitar una cotización o para resolver alguna duda, puedes hacerlo a través de los siguientes medios:
                 </em>
                 <ul class="uk-list uk-list-divider uk-text-left">
                     <li>
                         <span uk-icon="icon: location; ratio: 1.2" style="color: #826363;"></span> 
-                        <b>Calle Falsa 123, Colonia Ficticia, Ciudad Ficticia, Estado Ficticio</b>
+                        <small>Calle Falsa 123, Colonia Ficticia, Ciudad Ficticia, Estado Ficticio</small>
                     </li>
                     <li>
                         <span uk-icon="icon: mail; ratio: 1.2" style="color: #826363;"></span> 
                         <a href="mailto: info@construccionyremodelacionlg.com" class="uk-link-text">
-                           <b>ventas@construccionyremodelacionlg</b> 
+                           <small>ventas@construccionyremodelacionlg</small> 
                         </a>
                     </li>
                     <li>
                         <span uk-icon="icon: receiver; ratio: 1.2" style="color: #826363;"></span>
-                        <b>55 1565 9700</b>
+                        <small>55 1565 9700</small>
                     </li>
                     <li>
                         <span uk-icon="icon: whatsapp; ratio: 1.2" style="color: #826363;"></span>
                         <a href="https://api.whatsapp.com/send?phone=525515659700&amp;text=Hola, los contacto de la página: construccionyremodelacionlg.com, solicito la atención de un asesor, por favor." target="_blank" class="uk-link-text">
-                            <b>55 1565 9700</b>
+                            <small>55 1565 9700</small>
                         </a>
                     </li>
                 </ul>
