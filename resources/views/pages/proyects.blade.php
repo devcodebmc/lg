@@ -2,9 +2,9 @@
 
 @section('title', "| {$project->title}")
 
-@include('animations.buildloader')
-
 @section('content')
+
+@include('animations.buildloader')
 
 <div class="uk-grid-divider uk-grid-small uk-child-width-1-3@m uk-grid uk-padding" uk-grid>
     <!-- Columna izquierda: Información General -->
