@@ -100,7 +100,52 @@
                 </div>
                 <h4>Instalaciones Eléctricas</h4>
             </div>
-            
+
+            <!-- Tarjete de servicio 7 Instalación Hidraulica y Plomería -->
+            <div class="service-card">
+                <div class="service-image-container">
+                    <img src="https://images.pexels.com/photos/8925979/pexels-photo-8925979.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Instalación Hidráulica o Plomería">
+                    <div class="service-overlay" uk-toggle="target: #modal-services"    
+                        data-title="Instalación Hidráulica y Plomería"
+                        data-subtitle="Soluciones de plomería y sistemas hidráulicos para tu hogar o negocio."
+                        data-description="Nuestro servicio de instalación hidráulica y plomería garantiza soluciones eficientes y duraderas para tu hogar o negocio. Trabajamos con materiales de calidad y personal especializado para brindar un servicio integral."
+                        data-features="<li>Instalación de tuberías y sistemas de agua.</li><li>Reparación de fugas y problemas de plomería.</li><li>Instalación de sanitarios, griferías y accesorios.</li><li>Asesoría en sistemas de agua caliente y fría.</li><li>Servicio de mantenimiento y revisión periódica.">
+                        <span class="service-plus-icon" uk-icon="plus"></span>
+                    </div>
+                </div>
+                <h4>Plomería y Sistemas Hidráulicos</h4>
+            </div>
+
+            <!-- Tarjeta de servicio 8 Soluciones Integrales para Albercas -->
+            <div class="service-card">
+                <div class="service-image-container">
+                    <img src="https://images.pexels.com/photos/261327/pexels-photo-261327.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Soluciones Integrales para Albercas">
+                    <div class="service-overlay" uk-toggle="target: #modal-services" 
+                        data-title="Soluciones Integrales para Albercas"
+                        data-subtitle="Diseño, construcción y mantenimiento de albercas para tu hogar o negocio."
+                        data-description="Ofrecemos servicios integrales para albercas, incluyendo diseño, construcción, reparación y mantenimiento. Nuestro equipo de expertos se encarga de cada detalle para garantizar la calidad y durabilidad de tu alberca."
+                        data-features="<li>Diseño y construcción de albercas según tus necesidades.</li><li>Reparación de fugas y problemas de alberca.</li><li>Mantenimiento de alberca y sistemas de agua.</li><li>Instalación de accesorios y soportes.</li><li>Servicio de mantenimiento y revisión periódica.">
+                        <span class="service-plus-icon" uk-icon="plus"></span>
+                    </div>
+                </div>
+                <h4>Soluciones Integrales para Albercas</h4>
+            </div>
+
+            <!-- Tarjeta de servicio 9 Impermeabilización -->
+            <div class="service-card">
+                <div class="service-image-container">
+                    <img src="https://images.pexels.com/photos/5924009/pexels-photo-5924009.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Impermeabilización">
+                    <div class="service-overlay" uk-toggle="target: #modal-services"
+                        data-title="Impermeabilización"
+                        data-subtitle="Protege tu hogar o negocio con soluciones de impermeabilización de calidad."
+                        data-description="Nuestro servicio de impermeabilización incluye asesoría en la selección de materiales, preparación de superficies y aplicación profesional para garantizar la protección de tu hogar o negocio contra filtraciones y humedad."
+                        data-features="<li>Amplia gama de materiales y acabados.</li><li>Impermeabilización de alta durabilidad.</li><li>Aplicación uniforme y sin imperfecciones.</li><li>Uso de materiales ecológicos.</li><li>Trabajo limpio y sin manchas.">
+                        <span class="service-plus-icon" uk-icon="plus"></span>
+                    </div>
+                </div>
+                <h4>Impermeabilización</h4>
+            </div>
+ 
         </div>
     </div>
 </div>
