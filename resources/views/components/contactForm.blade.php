@@ -60,12 +60,12 @@
                     </li>
                     <li>
                         <span uk-icon="icon: receiver; ratio: 1.2" style="color: #826363;"></span>
-                        <small>55 1565 9700</small>
+                        <small>55 3456 3072</small>
                     </li>
                     <li>
                         <span uk-icon="icon: whatsapp; ratio: 1.2" style="color: #826363;"></span>
-                        <a href="https://api.whatsapp.com/send?phone=525515659700&amp;text=Hola, los contacto de la página: construccionyremodelacionlg.com, solicito la atención de un asesor, por favor." target="_blank" class="uk-link-text">
-                            <small>55 1565 9700</small>
+                        <a href="https://api.whatsapp.com/send?phone=525534563072&amp;text=Hola, los contacto de la página: construccionyremodelacionlg.com, solicito la atención de un asesor, por favor." target="_blank" class="uk-link-text">
+                            <small>55 3456 3072</small>
                         </a>
                     </li>
                 </ul>

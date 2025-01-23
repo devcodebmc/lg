@@ -10,7 +10,7 @@
             <div class="banner-content-right">
                 <p class="uk-text-bold">¡Llama ahora!</p>
                 <p class="uk-heading-small">
-                    +52 5515659700
+                    +52 5534563072
                 </p>
             </div>
         </div>

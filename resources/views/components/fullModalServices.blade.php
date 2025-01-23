@@ -75,7 +75,7 @@
                         <h3 class="uk-heading-line"><span>Contáctanos</span></h3>
                         <p>
                             <strong>Teléfono:</strong> 
-                            <a href="tel:+525515659700" class="uk-link-text">+52 5515659700</a>
+                            <a href="tel:+525534563072" class="uk-link-text">+52 5534563072</a>
                         </p>
                         <p>
                             <strong>Correo electrónico:</strong> 
@@ -83,7 +83,7 @@
                                 info@construccionyremodelacionlg.com
                             </a>
                         </p>
-                        <a href="https://wa.me/+525515659700" target="_blank" 
+                        <a href="https://wa.me/+525534563072" target="_blank" 
                             class="uk-button uk-button-primary uk-width-1-1 uk-margin-top">
                             <span uk-icon="whatsapp"></span> Hablemos de tu proyecto!
                         </a>

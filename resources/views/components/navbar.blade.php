@@ -49,8 +49,8 @@
                     <br>
                     <span class="uk-text-small">
                         <strong>Tel.:</strong> 
-                        <a href="tel:+525515659700" class="uk-link-text" style="text-decoration: none;">
-                            (55) 1565 9700
+                        <a href="tel:+525534563072" class="uk-link-text" style="text-decoration: none;">
+                            (55) 3456 3072
                         </a>
                     </span>
                 </div>
@@ -58,7 +58,7 @@
                 <div class="uk-flex uk-flex-middle">
                     <a href="https://www.facebook.com/construccionyremodelacionlg" target="_blank" class="uk-icon-button uk-margin-small-right" uk-icon="facebook"></a>
                     <a href="https://www.instagram.com/construccion_remodelacionlg" target="_blank" class="uk-icon-button uk-margin-small-right" uk-icon="instagram"></a>
-                    <a href="https://api.whatsapp.com/send?phone=525515659700&amp;text=Hola, los contacto de la página: construccionyremodelacionlg.com, solicito la atención de un asesor, por favor." target="_blank" class="uk-icon-button" uk-icon="whatsapp"></a>
+                    <a href="https://api.whatsapp.com/send?phone=525534563072&amp;text=Hola, los contacto de la página: construccionyremodelacionlg.com, solicito la atención de un asesor, por favor." target="_blank" class="uk-icon-button" uk-icon="whatsapp"></a>
                 </div>
             </div>
 
@@ -96,7 +96,7 @@
                 <div class="uk-text-small uk-text-muted">¿Tiene alguna pregunta?</div>
                 <div class="uk-text-small">
                     <strong>Tel.:</strong> 
-                    <a href="tel:+525515659700" class="uk-link-text" style="text-decoration: none;"> 
+                    <a href="tel:+525534563072" class="uk-link-text" style="text-decoration: none;"> 
                         (55) 1565 9700
                     </a>
                 </div>
@@ -106,7 +106,7 @@
             <div class="uk-flex uk-flex-center">
                 <a href="https://www.facebook.com/construccionyremodelacionlg" target="_blank" class="uk-icon-button uk-margin-small-right" uk-icon="facebook"></a>
                 <a href="https://www.instagram.com/construccion_remodelacionlg" target="_blank" class="uk-icon-button uk-margin-small-right" uk-icon="instagram"></a>
-                <a href="https://api.whatsapp.com/send?phone=525515659700&amp;text=Hola, los contacto de la página: construccionyremodelacionlg.com, solicito la atención de un asesor, por favor." target="_blank" class="uk-icon-button" uk-icon="whatsapp"></a>
+                <a href="https://api.whatsapp.com/send?phone=525534563072&amp;text=Hola, los contacto de la página: construccionyremodelacionlg.com, solicito la atención de un asesor, por favor." target="_blank" class="uk-icon-button" uk-icon="whatsapp"></a>
             </div>
         </div>
 

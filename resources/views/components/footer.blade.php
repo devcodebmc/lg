@@ -14,8 +14,8 @@
             <div class="uk-flex uk-flex-column uk-flex-middle">
                 <div class="uk-flex uk-flex-middle lg-tel">
                     <span uk-icon="icon: receiver; ratio: 1.2" class="uk-margin-small-right"></span>
-                    <a href="tel:+525515659700" style="text-decoration: none;">
-                        <span>+52 55 1565 9700</span>
+                    <a href="tel:+525534563072" style="text-decoration: none;">
+                        <span>+52 55 3456 3072</span>
                     </a>
                 </div>
                 <div class="uk-flex uk-flex-middle uk-margin-small-top lg-mail">
@@ -64,7 +64,7 @@
                         <a href="https://www.instagram.com/construccion_remodelacionlg/" target="_blank" uk-icon="icon: instagram" class="social-icon"></a>
                     </li>
                     <li>
-                        <a href="https://api.whatsapp.com/send?phone=525515659700&amp;text=Hola, los contacto de la página: construccionyremodelacionlg.com, solicito la atención de un asesor, por favor." target="_blank" uk-icon="icon: whatsapp" class="social-icon"></a>
+                        <a href="https://api.whatsapp.com/send?phone=525534563072&amp;text=Hola, los contacto de la página: construccionyremodelacionlg.com, solicito la atención de un asesor, por favor." target="_blank" uk-icon="icon: whatsapp" class="social-icon"></a>
                     </li>
                 </ul>
             </div>
